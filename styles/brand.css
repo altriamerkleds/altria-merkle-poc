@@ -31,7 +31,7 @@
 
 /* Brand 1 Specific Style Start Here */
 .brand1 .section.hero-container .hero-wrapper p{
-  background: "url(https://www.onnicotine.com/media/.renditions/wysiwyg/subscription/on_logo_on_dark_stacked.png)";
+  background: url("https://www.onnicotine.com/media/.renditions/wysiwyg/subscription/on_logo_on_dark_stacked.png");
   background-repeat: no-repeat;
   height: 163px;
   background-position: center;
