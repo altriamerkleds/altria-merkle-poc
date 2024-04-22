@@ -1,0 +1,26 @@
+.brand1{
+  --text-color: #454545;
+  --body-font-family: "ArialMTBlack";
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: var(--body-font-family);
+  --btn-bg-color: #F9520A;
+  --btn-text-color: #fff;
+  --background-color: white;
+  --footer-link-color: #454545;
+  --footer-link-hover-color: #F9520A;
+  --footer-bg-color: #fff;
+}
+
+.brand2{
+  --text-color: #333;
+  --body-font-family: "Helvetica Neue", sans-serif;
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: var(--body-font-family);
+  --btn-bg-color: #8B713C;
+  --btn-text-color: #fff;
+  --background-color: white;
+  --footer-link-color:  #8B713C;
+  --footer-link-hover-color: #fff;
+  --footer-bg-color: black;
+}
+

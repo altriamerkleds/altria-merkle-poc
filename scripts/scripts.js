@@ -83,6 +83,14 @@ async function loadEager(doc) {
     await waitForLCP(LCP_BLOCKS);
   }
 
+  const pagePath = window.location.href;
+
+  if (pagePath.indexOf('/brand1') > -1) {
+    document.body.classList.add('brand1');
+  } else if (pagePath.indexOf('/brand2') > -1) {
+    document.body.classList.add('brand2');
+  }
+
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
     if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
