@@ -28,6 +28,7 @@
   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
+  --body-font-size-xss: 14px;
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
@@ -60,10 +61,10 @@
 }
 
 body {
-  font-size: var(--body-font-size-m);
+  font-size: var(--body-font-size-xss);
   margin: 0;
   font-family: var(--body-font-family);
-  line-height: 1.6;
+  line-height: var(--heading-font-size-s);
   color: var(--text-color);
   background-color: var(--background-color);
   display: none;
@@ -84,7 +85,7 @@ h4, h5, h6 {
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
+  scroll-margin: calc(var(--nav-height)  1em);
 }
 
 h1 { font-size: var(--heading-font-size-xxl) }
@@ -122,7 +123,7 @@ main pre {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
+  color: var(--btn-text-color);
   text-decoration: none;
 }
 
@@ -141,10 +142,13 @@ a.button:any-link, button {
   padding: 5px 30px;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-size: var(--heading-font-size-s);
+  font-weight:400;
+  height:40px;
+  text-transform:uppercase;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg-color);
   margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -153,19 +157,20 @@ a.button:any-link, button {
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
+  background-color: var(--btn-bg-color);
+  box-shadow: 2px 2px 12px 2px var(--btn-text-color);
   cursor: pointer;
 }
 
 button:disabled, button:disabled:hover {
-  background-color: var(--light-color);
+  background-color: var(--btn-bg-color);
   cursor: unset;
 }
 
 a.button.secondary, button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
-  color: var(--text-color)
+  color: var(--btn-text-color);
 }
 
 main img {
@@ -206,5 +211,68 @@ main .section {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: var(--btn-bg-color);
 }
+
+input {
+  font-size: var(--body-font-size-xs);
+  font-weight:400;
+  height:30px;
+  position:relative;
+  text-align:left;
+  background: transparent;
+  padding:0;
+  margin: 18px 0 0;
+  border:1px solid transparent;
+  border-bottom:1px solid #666;
+  cursor:text;
+  line-height:var(--heading-font-size-m);
+  color:var(--btn-text-color);
+}
+
+input:hover{
+  border-bottom:1px solid var(--btn-text-color);
+  border-right:1px solid var(--btn-text-color);
+}
+  
+input:focus{
+  box-shadow: 2px 2px 12px 2px var(--btn-text-color);
+}
+
+label {
+  cursor: text;
+  opacity: 1;
+  transition: all .2s;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  font-size:10px;
+  visibility: hidden;
+  z-index: -1;
+}
+
+footer{
+  background-color: var(--footer-bg-color);
+}
+
+footer .footer p, footer .footer p a{
+  border-radius: 5px;
+  min-width: 236px;
+  text-decoration: none;
+  color: var(--footer-link-color);
+  font-size: var(--body-font-size-xss);
+  text-transform: uppercase;
+}
+
+footer .footer p a:hover{
+  color: var(--footer-link-hover-color);
+  text-decoration: underline;
+}
+
+header.header-wrapper .nav-wrapper nav a:any-link,
+header nav .nav-sections .default-content-wrapper > ul > li{
+  color: var(--footer-link-color);
+}
+  
