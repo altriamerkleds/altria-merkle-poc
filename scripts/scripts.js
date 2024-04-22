@@ -85,10 +85,11 @@ async function loadEager(doc) {
 
   const pagePath = window.location.href;
 
-  if (pagePath.indexOf('/brand1') > -1) {
+  if (pagePath.indexOf('/onnicotine') > -1) {
     document.body.classList.add('brand1');
-  } else if (pagePath.indexOf('/brand2') > -1) {
+  } else if (pagePath.indexOf('/freshcope') > -1) {
     document.body.classList.add('brand2');
+    document.querySelector('link[rel = "icon"]').href = '../images/eye_open.png';
   }
 
   try {
