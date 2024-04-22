@@ -242,7 +242,6 @@ input:focus{
 label {
   cursor: text;
   opacity: 1;
-  -webkit-transition: all .2s;
   transition: all .2s;
   text-transform: uppercase;
   font-weight: 300;
