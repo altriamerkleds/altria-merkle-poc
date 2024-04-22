@@ -257,6 +257,10 @@ footer{
   background-color: var(--footer-bg-color);
 }
 
+.default-content-wrapper p{
+  color: var(--btn-text-color);
+}
+
 footer .footer p, footer .footer p a{
   border-radius: 5px;
   min-width: 236px;
@@ -269,6 +273,11 @@ footer .footer p, footer .footer p a{
 .default-content-wrapper p:first-child{
   color: var(--footer-link-color);
 }
+
+.default-content-wrapper h2{
+  color: var(--btn-text-color);
+}
+
 
 footer .footer p a:hover{
   color: var(--footer-link-hover-color);

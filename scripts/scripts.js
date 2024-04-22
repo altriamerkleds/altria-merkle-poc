@@ -90,6 +90,7 @@ async function loadEager(doc) {
   } else if (pagePath.indexOf('/freshcope') > -1) {
     document.body.classList.add('brand2');
     document.querySelector('link[rel = "icon"]').href = '../images/eye_open.png';
+    document.querySelector('.default-content-wrapper img').src = '../images/fresh-cope.png';
   }
 
   try {
