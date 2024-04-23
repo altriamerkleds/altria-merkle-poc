@@ -261,6 +261,11 @@ footer{
   color: var(--btn-text-color);
 }
 
+.warning p {
+  color:var(--warning-color);
+  font-size:35px;
+}
+
 footer .footer p, footer .footer p a{
   border-radius: 5px;
   min-width: 236px;
@@ -295,7 +300,7 @@ header nav .nav-sections .default-content-wrapper > ul > li{
   height:var(--hero-height);
 }
 
-/*warning component css*/
+/* warning component css */
 .section.warning-container {
   background-color: var(--warning-background);
   box-sizing: border-box;
@@ -311,7 +316,3 @@ header nav .nav-sections .default-content-wrapper > ul > li{
   margin: 0 10px;
 }
 
-.warning p {
-  color:var(--warning-color);
-  font-size:35px
-}
