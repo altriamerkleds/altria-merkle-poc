@@ -1,0 +1,83 @@
+.punch-cards-wrapper {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lx-gap);
+}
+
+.punch-cards-wrapper .punch-cards {
+  aspect-ratio: 1.7;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.punch-cards-wrapper .punch-cards .prev-btn,
+.punch-cards-wrapper .punch-cards .next-btn{
+  padding: 7px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  font-size: 48px;
+  font-weight: 900;
+  color: #10100e;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.punch-cards-wrapper .punch-cards .prev-btn{
+  left: 0;
+}
+
+.punch-cards-wrapper .punch-cards .next-btn{
+  right: 0;
+  float: right;
+}
+
+.punch-cards-wrapper .punch-cards .prev-btn:focus, 
+.punch-cards-wrapper .punch-cards .next-btn:focus {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.punch-cards-wrapper .punch-cards .prev-btn:hover,
+.punch-cards-wrapper .punch-cards .next-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.punch-cards-wrapper .punch-cards ul {
+  width: calc(100% - 80px);
+}
+
+.punch-cards-wrapper .punch-cards ul li{
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.punch-cards-wrapper .punch-cards ul li.active {
+  opacity: 1;
+  display: block;
+}
+
+.punch-cards-wrapper .punch-cards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.punch-cards-wrapper .punch-cards div.active {
+  opacity: 1;
+  display: block;
+}
+
+@media (width >= 767px) {
+  .punch-cards-wrapper {
+    width: 70%;
+  }
+}
