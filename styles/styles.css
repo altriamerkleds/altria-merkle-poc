@@ -292,4 +292,26 @@ header nav .nav-sections .default-content-wrapper > ul > li{
   
 .section.hero-container{
   background: var(--background-section-image);
+  height:var(--hero-height);
+}
+
+/*warning component css*/
+.section.warning-container {
+  background-color: var(--warning-background);
+  box-sizing: border-box;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: calc(100% - 20px);
+  border: var(--warning-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin: 0 10px;
+}
+
+.warning p {
+  color:var(--warning-color);
+  font-size:35px
 }
