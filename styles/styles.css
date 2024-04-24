@@ -321,3 +321,16 @@ header nav .nav-sections .default-content-wrapper > ul > li{
   border-radius: 0;
   padding: 40px;
 }
+
+.terms-and-conditions {
+  max-width:650px;
+  margin:0 auto;
+  width:100%;
+}
+
+.terms-and-conditions p{
+  color:#a9a9a9;
+  font-size:17px;
+  line-height:24px;
+
+}
