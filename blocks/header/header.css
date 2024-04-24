@@ -7,6 +7,12 @@ header .nav-wrapper {
   margin-top: 232px;
 }
 
+@media (width >= 1024px) {
+  header .nav-wrapper {
+    margin-top: 127px;
+  }
+}
+
 header nav {
   box-sizing: border-box;
   display: grid;
