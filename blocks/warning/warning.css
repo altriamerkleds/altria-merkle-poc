@@ -18,7 +18,22 @@
   padding: 25px;
 }
 
+.sms div:nth-of-type(3) p {
+  color:#ff5200;
+  font-size:18px;
+  font-weight:normal;
+}
 .warning p {
   color:var(--warning-color);
   font-size:35px
 }
+
+.sms-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight:bold;
+  font-size:25px;
+  }
+
+ 
