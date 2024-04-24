@@ -80,14 +80,6 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
-    const pagePath = window.location.href;
-
-    if (pagePath.indexOf('/onnicotine') > -1) {
-      document.body.classList.add('brand1');
-    } else if (pagePath.indexOf('/freshcope') > -1) {
-      document.body.classList.add('brand2');
-      document.querySelector('link[rel = "icon"]').href = '../images/eye_open.png';
-    }
     await waitForLCP(LCP_BLOCKS);
   }
 
