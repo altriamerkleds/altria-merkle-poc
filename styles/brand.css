@@ -12,6 +12,9 @@
   --main-content-background-url: url("/copenhagen/images/HLX-133-GTC-Desktop_logo.png");
   --main-content-background-color-1: #ff5200;
   --background-section-image: linear-gradient(#ff5200 1.1%,#ff5200) no-repeat;
+  --warning-border: 6px solid #000;
+  --warning-background:#fff;
+  --warning-color:#000;
 }
 
 .brand2{
@@ -26,6 +29,9 @@
   --footer-link-hover-color: #fff;
   --footer-bg-color: black;
   --background-section-image: url('../images/d-cop-gtc-200-background-or905.jpg');
+  --warning-border:6px solid #fff;
+  --warning-background:#000;
+  --warning-color:#fff;
 }
 
 

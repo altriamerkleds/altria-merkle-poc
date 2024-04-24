@@ -1,0 +1,24 @@
+/* warning component css */
+.section.warning-container {
+  background-color: var(--warning-background);
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  z-index: 3;
+  text-align: center;
+}
+
+.section.warning-container .warning-wrapper {
+  border: var(--warning-border);
+  max-width: 100%;
+  padding: 25px;
+}
+
+.warning p {
+  color:var(--warning-color);
+  font-size:35px
+}
