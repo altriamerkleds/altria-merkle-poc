@@ -4,12 +4,18 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: relative;
-  margin-top: 127px;
+  margin-top: 232px;
 }
 
-@media (width >= 768px) {
+@media (width >= 767px) {
   header .nav-wrapper {
-    margin-top: 232px;
+    margin-top: 162px;
+  }
+}
+
+@media (width >= 1024px) {
+  header .nav-wrapper {
+    margin-top: 127px;
   }
 }
 
