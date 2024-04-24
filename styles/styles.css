@@ -281,3 +281,31 @@ header nav .nav-sections .default-content-wrapper > ul > li{
 .section.hero-container{
   background: var(--background-section-image);
 }
+
+/* Button Short and Long Style */
+.button-container .button[title='CONFIRM'],
+.button-container .button[title='UPDATE'],
+.button-container .button[title='HOW IT WORKS >']
+{
+  color: #fff;
+  background: #FA5301;
+  text-transform: uppercase;
+  padding: 25px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.button-container .button[title='UPDATE']{
+  background-color: #767676;
+}
+
+.button-container .button[title='HOW IT WORKS >']{
+  max-width: 100%;
+  border-radius: 0;
+  padding: 40px;
+}
