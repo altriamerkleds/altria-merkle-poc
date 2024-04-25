@@ -261,6 +261,12 @@ footer{
   color: var(--btn-text-color);
 }
 
+.terms-and-conditions p{
+  color:#a9a9a9;
+  font-size:17px;
+  line-height:24px;
+}
+
 footer .footer p, footer .footer p a{
   border-radius: 5px;
   min-width: 236px;
@@ -289,7 +295,37 @@ header.header-wrapper .nav-wrapper nav a:any-link,
 header nav .nav-sections .default-content-wrapper > ul > li{
   color: var(--footer-link-color);
 }
-  
-.section.hero-container{
-  background: var(--background-section-image);
+
+/* Button Short and Long Style */
+.button-container .button[title='CONFIRM'],
+.button-container .button[title='UPDATE'],
+.button-container .button[title='HOW IT WORKS >']
+{
+  color: #fff;
+  background: #FA5301;
+  text-transform: uppercase;
+  padding: 25px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.button-container .button[title='UPDATE']{
+  background-color: #767676;
+}
+
+.button-container .button[title='HOW IT WORKS >']{
+  max-width: 100%;
+  border-radius: 0;
+  padding: 40px;
+}
+
+.terms-and-conditions {
+  max-width:650px;
+  margin:0 auto;
+  width:100%;
 }
