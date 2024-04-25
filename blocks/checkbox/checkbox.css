@@ -19,15 +19,17 @@
 .checkbox > div {
   border-bottom:1px solid #c6c4c4;
   padding:0 25%;
-}
-
-.checkbox > div {
   color:#fff;
 }
 
 .checkbox div img {
   width:30px;
   margin: 0 10px;
+}
+
+.footdemo div {
+  display: flex;
+  align-items: center;
 }
 
 .checkbox > div > div:nth-child(1){
@@ -41,11 +43,6 @@
 .footdemo {
   width:100%;
   margin: 0 auto;
-}
-
-.footdemo div {
-  display: flex;
-  align-items: center;
 }
 
 .footdemo div > div{
