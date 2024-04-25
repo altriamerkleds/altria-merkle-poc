@@ -27,34 +27,10 @@
   margin: 0 10px;
 }
 
-.footdemo div {
-  display: flex;
-  align-items: center;
-}
-
 .checkbox > div > div:nth-child(1){
   flex-grow:1;
 }
 
 .checkbox > div:last-child div {
   color:#fff;
-}
-
-.footdemo {
-  width:100%;
-  margin: 0 auto;
-}
-
-.footdemo div > div{
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-}
-
-.footdemo div > div:first-child {
-flex-grow:1;
-}
-
-.footdemo div > div h3 {
-  font-size:15px;
 }
