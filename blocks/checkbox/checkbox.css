@@ -27,6 +27,16 @@
   margin: 0 10px;
 }
 
+.checkbox > div:first-child {
+  background-color:#fff;
+  text-align: center;
+}
+
+.checkbox > div:first-child h3{
+  color:#F9520A;
+  margin:0 auto 35px;
+}
+
 .checkbox > div > div:nth-child(1){
   flex-grow:1;
 }
