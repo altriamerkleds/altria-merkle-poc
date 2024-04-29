@@ -1,0 +1,132 @@
+.newfooter {
+  width:100%;
+  margin: 0 auto;
+
+}
+
+.newfooter div {
+  display: flex;
+}
+
+.newfooter div > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.newfooter div > div:first-child {
+flex-grow:1;
+}
+
+.newfooter div > div h3 {
+  font-size:13px;
+  text-transform: uppercase;
+}
+
+.newfooter ul{
+  padding:0;
+  list-style:none;
+  margin: 0 100px 0 0;
+  line-height: 22px;
+}
+
+.newfooter ul li {
+display:block;
+}
+
+.newfooter ul li a {
+  color:#000000;
+  }
+    
+.newfooter div:nth-child(1) div:nth-child(1) img{
+  width:120px;
+}
+  
+.newfooter div:nth-child(1) div:nth-child(1) table{
+  display:flex;
+}
+
+.newfooter div:nth-child(1) div:nth-child(1) table img{
+  width:30px;
+  margin-right:15px;
+}
+ 
+.newfooter> div:last-child {
+  margin-top:60px;
+ }
+
+ .newfooter div:last-child div:last-child ul{
+  display: flex;
+  width: 460px;
+  flex-wrap: wrap;
+}
+
+.newfooter div:last-child div:last-child ul li {
+  margin-right:20px;
+}
+
+.newfooter > div:nth-child(1) div:last-child table,
+.newfooter> div:nth-child(1) div:last-child tbody,
+.newfooter> div:nth-child(1) div:last-child tr {
+  display:flex;
+}
+
+.newfooter> div:nth-child(1) div:last-child td {
+  flex-direction:column;
+  display:flex;
+}
+
+@media (width <= 768px) {
+  .newfooter > div:last-child { 
+    margin-top:25px;
+    flex-direction: column-reverse;
+  }
+
+  .newfooter > div:first-child {
+    flex-direction: column;
+  }
+
+  .newfooter div:last-child div:last-child ul {
+    width:100%;
+  }
+}
+
+@media (width <= 640px) {
+
+  .newfooter {
+    text-align:center;
+  }
+
+  .newfooter div:nth-child(1) div:nth-child(1) table {
+    justify-content: center;
+  }
+
+  .newfooter div:nth-child(1) div:nth-child(1) table img {
+    margin-right:5px;
+    margin-left:5px;
+  }
+
+  .newfooter ul {
+    margin:0;
+  }
+
+  .newfooter > div:nth-child(1) {
+    flex-direction: column;
+  }
+
+  .newfooter > div:nth-child(1) div:last-child table,
+  .newfooter > div:nth-child(1) div:last-child tbody,
+  .newfooter > div:nth-child(1) div:last-child tr {
+    flex-direction:column;
+  }
+
+  .newfooter > div:last-child { 
+    margin-top:25px;
+    flex-direction: column-reverse;
+  }
+
+  .newfooter div:last-child div:last-child ul {
+    width:100%;
+    justify-content: center;
+  }
+}
