@@ -32,3 +32,12 @@
   src: url('../fonts/ARIALMTBLACK.TTF') format('ttf');
 }
 
+@font-face {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ARIAL.TTF') format('ttf');
+}
+
+

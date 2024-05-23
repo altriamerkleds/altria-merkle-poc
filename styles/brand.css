@@ -6,9 +6,14 @@
   --btn-bg-color: #F9520A;
   --btn-text-color: #fff;
   --background-color: white;
-  --footer-link-color: #454545;
-  --footer-link-hover-color: #F9520A;
+  /* footer variables */
+  --footer-link-color: #000;
+  --footer-link-hover-color: #000;
   --footer-bg-color: #fff;
+  --footer-link-font-size:14px;
+  --footer-text-color: #000;
+  --footer-text-font-size:9px;
+  --footer-font-family:"Arial";
   --main-content-background-color-1: #ff5200;
   --background-section-image: linear-gradient(#ff5200 1.1%,#ff5200) no-repeat;
   --warning-border: 6px solid #000;
@@ -24,9 +29,37 @@
   --btn-bg-color: #8B713C;
   --btn-text-color: #fff;
   --background-color: white;
+  /* footer variables */
   --footer-link-color:  #8B713C;
   --footer-link-hover-color: #fff;
-  --footer-bg-color: black;
+  --footer-bg-color: #000;
+  --footer-link-font-size:14px;
+  --footer-text-color: #8B713C;
+  --footer-text-font-size:9px;
+  --footer-font-family:"Arial";
+  --background-section-image: url('../images/d-cop-gtc-200-background-or905.jpg');
+  --warning-border:6px solid #fff;
+  --warning-background:#000;
+  --warning-color:#fff;
+}
+
+
+.brand3{
+  --text-color: #333;
+  --body-font-family: "Helvetica Neue", sans-serif;
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: var(--body-font-family);
+  --btn-bg-color: #8B713C;
+  --btn-text-color: #fff;
+  --background-color: white;
+  /* footer variables */
+  --footer-link-color:  #fff;
+  --footer-link-hover-color: #fff;
+  --footer-bg-color: #000;
+  --footer-link-font-size:14px;
+  --footer-text-color:#fff;
+  --footer-text-font-size:9px;
+  --footer-font-family:"Arial";
   --background-section-image: url('../images/d-cop-gtc-200-background-or905.jpg');
   --warning-border:6px solid #fff;
   --warning-background:#000;
