@@ -39,7 +39,7 @@ footer .footer ul {
 .footer div:last-child p {
   display:block;
   margin:0;
-  padding:15px 0 0 0;
+  padding:15px 0 0;
   color:var(--footer-text-color);
   text-transform: uppercase;
   font-size:var(--footer-text-font-size);
