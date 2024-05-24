@@ -54,7 +54,6 @@ export default function decorate(block) {
     showItem((index + 1) % items.length);
   });
 
-
   // Numbers code
   const punchcardContainer = document.querySelector('.punchcards-container');
   const punchcardWrapper = document.querySelector('.punchcards-wrapper');
