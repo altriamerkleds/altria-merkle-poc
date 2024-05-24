@@ -48,4 +48,7 @@
   --warning-border:6px solid #fff;
   --warning-background:#000;
   --warning-color:#fff;
+  --scancode-input-color: #ADB5BD;
+  --scancode-btn-color: #101418;
+  --scancode-bg-color: var(--text-color);
 }
