@@ -18,6 +18,7 @@
   --checkbox-heading-color: #F9520A;
   --checkbox-para-color: var(--background-color);
   --checkbox-head-bg-color:  var(--background-color);
+  --punch-card-body-color: var(--background-color);
 }
 
 .copenhagen{
@@ -39,6 +40,7 @@
   --checkbox-heading-color: var(--background-color);
   --checkbox-para-color: var(--text-color);
   --checkbox-head-bg-color:  var(--background-color);
+  --punch-card-body-color: var(--background-color);
 }
 
 .whitelabel{
@@ -60,4 +62,5 @@
   --checkbox-heading-color: var(--background-color);
   --checkbox-para-color: var(--text-color);
   --checkbox-head-bg-color:  var(--text-color);
+  --punch-card-body-color: var(--text-color);
 }

@@ -53,4 +53,35 @@ export default function decorate(block) {
     const index = [...items].findIndex((item) => item.classList.contains('active'));
     showItem((index + 1) % items.length);
   });
+
+
+  // Numbers code
+  const punchcardContainer = document.querySelector('.punchcards-container');
+  const punchcardWrapper = document.querySelector('.punchcards-wrapper');
+  const punchDataNumberValue = punchcardContainer.getAttribute('data-numbers');
+
+  if (punchDataNumberValue === 'true') {
+    const totalLIItems = items.length;
+    const numberDiv = document.createElement('div');
+    const numberUl = document.createElement('ul');
+    numberDiv.className = 'punchcards-numbers';
+    numberUl.className = 'punchcards-numberlist';
+
+    let i = 1;
+    do {
+      const numberLi = document.createElement('li');
+      numberLi.innerText = i;
+      numberLi.className = 'punchcards-numbers';
+      numberUl.append(numberLi);
+      // eslint-disable-next-line no-plusplus
+      i++;
+    } while (i <= totalLIItems);
+    numberDiv.append(numberUl);
+    punchcardWrapper.append(numberDiv);
+
+    document.querySelector('.punchcards-numbers').addEventListener('click', (e) => {
+      const nextSlideIndex = e.target.innerText;
+      showItem((nextSlideIndex - 1 + items.length) % items.length);
+    });
+  }
 }
