@@ -62,6 +62,9 @@
   --warning-border:6px solid #fff;
   --warning-background:#000;
   --warning-color:#fff;
+  --scancode-input-color: #ADB5BD;
+  --scancode-btn-color: #101418;
+  --scancode-bg-color: var(--text-color);
   --checkbox-bg: var(--background-color);
   --checkbox-heading-color: var(--background-color);
   --checkbox-para-color: var(--text-color);
