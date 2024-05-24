@@ -1,4 +1,4 @@
-.brand1{
+.onsite{
   --text-color: #454545;
   --body-font-family: "ArialMTBlack";
   --heading-font-family: var(--body-font-family);
@@ -9,15 +9,18 @@
   --footer-link-color: #454545;
   --footer-link-hover-color: #F9520A;
   --footer-bg-color: #fff;
-  --main-content-background-url: url("/copenhagen/images/HLX-133-GTC-Desktop_logo.png");
   --main-content-background-color-1: #ff5200;
   --background-section-image: linear-gradient(#ff5200 1.1%,#ff5200) no-repeat;
   --warning-border: 6px solid #000;
   --warning-background:#fff;
   --warning-color:#000;
+  --checkbox-bg: var(--text-color);
+  --checkbox-heading-color: #F9520A;
+  --checkbox-para-color: var(--background-color);
+  --checkbox-head-bg-color:  var(--background-color);
 }
 
-.brand2{
+.copenhagen{
   --text-color: #333;
   --body-font-family: "Helvetica Neue", sans-serif;
   --heading-font-family: var(--body-font-family);
@@ -32,23 +35,29 @@
   --warning-border:6px solid #fff;
   --warning-background:#000;
   --warning-color:#fff;
+  --checkbox-bg: var(--background-color);
+  --checkbox-heading-color: var(--background-color);
+  --checkbox-para-color: var(--text-color);
+  --checkbox-head-bg-color:  var(--background-color);
 }
 
-
-/* Brand 1 Specific Style Start Here */
-.brand1 .section.hero-container .hero-wrapper p{
-  background: url("https://www.onnicotine.com/media/.renditions/wysiwyg/subscription/on_logo_on_dark_stacked.png");
-  background-repeat: no-repeat;
-  height: 163px;
-  background-position: center;
+.whitelabel{
+  --text-color: #fff;
+  --body-font-family: 'Arial';
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: var(--body-font-family);
+  --btn-bg-color: #8B713C;
+  --btn-text-color: #fff;
+  --background-color: #000;
+  --footer-link-color:  #8B713C;
+  --footer-link-hover-color: #fff;
+  --footer-bg-color: black;
+  --background-section-image: url('../images/d-cop-gtc-200-background-or905.jpg');
+  --warning-border:6px solid #fff;
+  --warning-background:#000;
+  --warning-color:#fff;
+  --checkbox-bg: var(--background-color);
+  --checkbox-heading-color: var(--background-color);
+  --checkbox-para-color: var(--text-color);
+  --checkbox-head-bg-color:  var(--text-color);
 }
-
-/* Brand 1 Specific Style End Here */
-
-/* Brand 2 Specific Style Start Here */
-
-/* .brand2 .section.columns-container{
-  background: var(--background-section-image);
-} */
-
-/* Brand 2 Specific Style End Here */

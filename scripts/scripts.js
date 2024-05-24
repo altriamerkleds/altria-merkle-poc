@@ -85,11 +85,13 @@ async function loadEager(doc) {
 
   const pagePath = window.location.href;
 
-  if (pagePath.indexOf('/onnicotine') > -1) {
-    document.body.classList.add('brand1');
-  } else if (pagePath.indexOf('/freshcope') > -1) {
-    document.body.classList.add('brand2');
+  if (pagePath.indexOf('/onsite') > -1) {
+    document.body.classList.add('onsite');
+  } else if (pagePath.indexOf('/copenhagen') > -1) {
+    document.body.classList.add('copenhagen');
     document.querySelector('link[rel = "icon"]').href = '../images/eye_open.png';
+  } else {
+    document.body.classList.add('whitelabel');
   }
 
   try {
