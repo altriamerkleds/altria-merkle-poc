@@ -1,14 +1,16 @@
 .scancode{
   text-align: center;
 }
+
 .scancode .input-text{
   display: none;
 }
+
 .scancode input{
   background-color: var(--scancode-bg-color);
-  background-image: url(/images/Vector.png); /* all icons in a single file */
+  background-image: url('/images/Vector.png');
   background-repeat: no-repeat;
-  background-size:24px 24px;
+  background-size: 24px 24px;
   background-position: 98%;
   border-radius: 5px;
   color: var(--scancode-input-color);
@@ -26,9 +28,8 @@
   height: 44px;
   width: 310px;
   line-height: 18px;
-  Padding: 10px 0px 10px 80px;
+  Padding: 10px 0 10px 80px;
   word-spacing: 100px; 
-  
 }
 
 @media (width >= 992px) {
@@ -36,11 +37,12 @@
     background-size:34px 34px;
     width: 574px;
   }
+
   .scancode .button-container a.button{
     font-size: 36px;
     height: 80px;
     line-height: 36px;
-    padding: 20px 0px 20px 100px;
+    padding: 20px 0 20px 100px;
     width: 463px;
   }
 }
