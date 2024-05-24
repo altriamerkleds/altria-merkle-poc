@@ -1,4 +1,4 @@
-.brand1{
+.onsite{
   --text-color: #454545;
   --body-font-family: "ArialMTBlack";
   --heading-font-family: var(--body-font-family);
@@ -16,7 +16,7 @@
   --warning-color:#000;
 }
 
-.brand2{
+.copenhagen{
   --text-color: #333;
   --body-font-family: "Helvetica Neue", sans-serif;
   --heading-font-family: var(--body-font-family);
