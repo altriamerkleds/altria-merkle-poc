@@ -90,9 +90,8 @@ async function loadEager(doc) {
   } else if (pagePath.indexOf('/copenhagen') > -1) {
     document.body.classList.add('copenhagen');
     document.querySelector('link[rel = "icon"]').href = '../images/eye_open.png';
-  }
-  else {
-   document.body.classList.add('whitelabel');
+  } else {
+    document.body.classList.add('whitelabel');
   }
 
   try {
