@@ -1,4 +1,4 @@
-.brand1{
+.onsite{
   --text-color: #454545;
   --body-font-family: "ArialMTBlack";
   --heading-font-family: var(--body-font-family);
@@ -14,9 +14,16 @@
   --warning-border: 6px solid #000;
   --warning-background:#fff;
   --warning-color:#000;
+  --checkbox-bg: var(--text-color);
+  --checkbox-heading-color: #F9520A;
+  --checkbox-para-color: var(--background-color);
+  --checkbox-head-bg-color:  var(--background-color);
+  --punch-card-body-color: var(--background-color);
+  --link-color: var(--text-color);
+  --textblock-color: var(--text-color);
 }
 
-.brand2{
+.copenhagen{
   --text-color: #333;
   --body-font-family: "Helvetica Neue", sans-serif;
   --heading-font-family: var(--body-font-family);
@@ -31,4 +38,38 @@
   --warning-border:6px solid #fff;
   --warning-background:#000;
   --warning-color:#fff;
+  --checkbox-bg: var(--background-color);
+  --checkbox-heading-color: var(--background-color);
+  --checkbox-para-color: var(--text-color);
+  --checkbox-head-bg-color:  var(--background-color);
+  --punch-card-body-color: var(--background-color);
+  --link-color: var(--text-color);
+  --textblock-color: var(--text-color);
+}
+
+.whitelabel{
+  --text-color: #fff;
+  --body-font-family: 'Arial';
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: var(--body-font-family);
+  --btn-bg-color: #8B713C;
+  --btn-text-color: #fff;
+  --background-color: #000;
+  --footer-link-color:  #8B713C;
+  --footer-link-hover-color: #fff;
+  --footer-bg-color: black;
+  --background-section-image: url('../images/d-cop-gtc-200-background-or905.jpg');
+  --warning-border:6px solid #fff;
+  --warning-background:#000;
+  --warning-color:#fff;
+  --scancode-input-color: #ADB5BD;
+  --scancode-btn-color: #101418;
+  --scancode-bg-color: var(--text-color);
+  --checkbox-bg: var(--background-color);
+  --checkbox-heading-color: var(--background-color);
+  --checkbox-para-color: var(--text-color);
+  --checkbox-head-bg-color:  var(--text-color);
+  --punch-card-body-color: var(--text-color);
+  --link-color: var(--text-color);
+  --textblock-color: var(--text-color);
 }

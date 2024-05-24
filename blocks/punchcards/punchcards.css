@@ -1,33 +1,35 @@
 .punchcards-wrapper {
-  width: 100%;
-  margin: auto;
-  position: relative;
+  color: var(--punch-card-body-color);
   display: flex;
   flex-direction: column;
+  font-family: var(--body-font-family);
   gap: var(--lx-gap);
+  margin: auto;
+  position: relative;
+  width: 100%;
 }
 
 .punchcards-wrapper .punchcards {
   aspect-ratio: 1.7;
-  width: 100%;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .punchcards-wrapper .punchcards .prev-btn,
 .punchcards-wrapper .punchcards .next-btn{
-  padding: 7px;
-  position: absolute;
-  top: 50%;
+  color: var(--text-color);
   cursor: pointer;
+  display: inline-block;
   font-size: 48px;
   font-weight: 900;
-  color: #10100e;
-  display: inline-block;
-  width: 30px;
   height: 30px;
-  transform: translateY(-50%);
+  padding: 7px;
+  position: absolute;
   text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
 }
 
 .punchcards-wrapper .punchcards .prev-btn{
@@ -35,8 +37,8 @@
 }
 
 .punchcards-wrapper .punchcards .next-btn{
-  right: 0;
   float: right;
+  right: 0;
 }
 
 .punchcards-wrapper .punchcards .prev-btn:focus, 
@@ -50,34 +52,120 @@
 }
 
 .punchcards-wrapper .punchcards ul {
+  min-width: 310px;
   width: calc(100% - 80px);
 }
 
 .punchcards-wrapper .punchcards ul li{
-  opacity: 0;
   display: none;
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
 .punchcards-wrapper .punchcards ul li.active {
-  opacity: 1;
   display: block;
+  opacity: 1;
 }
 
-.punchcards-wrapper .punchcards img {
-  width: 100%;
+.punchcards-wrapper .punchcards ul li .punchcard-image img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  width: 100%;
 }
 
-.punchcards-wrapper .punchcards div.active {
-  opacity: 1;
-  display: block;
+.punchcards-wrapper .punchcards ul li .punchcard-body p{
+  left: 0;
+  position: absolute;
+  padding: 0 10px;
+  top: 0;
+  z-index: 1;
 }
 
-@media (width >= 767px) {
+.punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(1){
+  left: auto;
+  font: 400 12px/14px var(--body-font-family);
+  right: calc(44px);
+  top: 10px;
+}
+
+.punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(2),
+.punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(3){
+  bottom: 75px;
+  font: 700 12px/14px var(--body-font-family);
+  left: calc(44px);
+  top: auto;
+}
+
+.punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(3){
+  bottom: 60px;
+  top: auto;
+}
+
+.punchcards-wrapper .punchcards-numbers {
+  bottom: 20px;
+  position: absolute;
+}
+
+.punchcards-wrapper .punchcards-numbers ul.punchcards-numberlist {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5px;
+}
+
+.punchcards-wrapper .punchcards-numbers ul.punchcards-numberlist  li.punchcards-numbers {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 25px;
+  display: flex;
+  font: 400 12px/14px var(--body-font-family);
+  height: 20px;
+  justify-content: center;
+  list-style: none;
+  margin-left: 5px;
+  position: relative;
+  width: 20px;
+}
+
+@media (width >= 768px) {
   .punchcards-wrapper {
     width: 70%;
+  }
+}
+
+@media (width >= 992px) {
+  .punchcards-wrapper {
+    width: 70%;
+  }
+
+  .punchcards-wrapper .punchcards ul {
+    min-width: 574px;
+  }
+
+  .punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(1){
+    font: 400 20px/24px var(--body-font-family);
+  }
+
+  .punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(2),
+  .punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(3){
+    font: 700 22px/26px var(--body-font-family);
+  }
+
+  .punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(2){
+    bottom: 95px;
+    top: auto;
+  }
+
+  .punchcards-wrapper .punchcards ul li .punchcard-body p:nth-of-type(3){
+    bottom: 65px;
+    top: auto;
+  }
+
+  .punchcards-wrapper .punchcards-numbers ul.punchcards-numberlist  li.punchcards-numbers {
+    border: 3px solid;
+    font: 400 20px/24px var(--body-font-family);
+    height: 30px;
+    margin-left: 10px;
+    width: 30px;
   }
 }
