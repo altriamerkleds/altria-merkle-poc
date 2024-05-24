@@ -1,0 +1,14 @@
+.textblock {
+    color: var(--textblock-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: center;
+}
+
+@media (width >= 992px) {
+    .textblock {
+        font-size: 20px;
+        line-height: 24px;    
+    }
+}
