@@ -10,8 +10,8 @@ footer {
 }
 
 footer .footer {
-  max-width: 1200px;
   margin: auto;
+  max-width: 1200px;
 }
 
 footer .footer p {
@@ -122,8 +122,8 @@ display:block;
   }
 
   .footer div:nth-child(1) div:nth-child(1) table img {
-    margin-right:5px;
     margin-left:5px;
+    margin-right:5px;
   }
 
   .footer ul {
@@ -141,8 +141,8 @@ display:block;
   }
 
   .footer > div:last-child { 
-    margin-top:25px;
     flex-direction: column-reverse;
+    margin-top:25px;
   }
 
   .footer div:last-child div:last-child ul {
