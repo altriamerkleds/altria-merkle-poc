@@ -1,0 +1,14 @@
+.sms div:nth-of-type(3) p {
+  color:#ff5200;
+  font-size:18px;
+  font-weight:normal;
+}
+
+.sms-wrapper {
+  display: flex;
+  font-weight:bold;
+  font-size:25px;
+  justify-content: center;
+  line-height: normal;
+  text-align: center;
+} 
