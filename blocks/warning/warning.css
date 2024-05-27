@@ -35,11 +35,11 @@
 
 .sms-wrapper {
   display: flex;
-  justify-content: center;
-  text-align: center;
   font-weight:bold;
   font-size:25px;
+  justify-content: center;
   line-height: normal;
+  text-align: center;
   } 
 
  
