@@ -284,7 +284,7 @@ footer .footer p a:hover{
 
 header.header-wrapper .nav-wrapper nav a:any-link,
 header nav .nav-sections .default-content-wrapper > ul > li{
-  color: var(--footer-link-color);
+  color: var(--link-color);
 }
 
 /* Button Short and Long Style */

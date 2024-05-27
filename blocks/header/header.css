@@ -61,7 +61,7 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: var(--text-color);
 }
 
 /* hamburger */
@@ -72,6 +72,25 @@ header nav .nav-hamburger {
   align-items: center;
 }
 
+@media (width < 992px) {
+  header nav[aria-expanded="false"] .nav-hamburger {
+    position: absolute;
+    right: 20px;
+    top: calc(100% - 30px);
+  }
+
+  header .nav-brand{
+    position: absolute;
+    left: 10px;
+    top: calc(100% - 30px);
+  }
+
+  header nav[aria-expanded="true"] .nav-sections ul li[aria-expanded="true"] {
+    margin-bottom: 20px;
+  }
+}
+
+
 header nav .nav-hamburger button {
   height: 22px;
   margin: 0;
@@ -79,7 +98,7 @@ header nav .nav-hamburger button {
   border-radius: 0;
   padding: 0;
   background-color: var(--background-color);
-  color: inherit;
+  color: var(--text-color);
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
@@ -119,6 +138,8 @@ header nav[aria-expanded="false"] .nav-hamburger-icon::after {
 
 header nav[aria-expanded="true"] .nav-hamburger-icon {
   height: 22px;
+  position: absolute;
+  right: 20px;
 }
 
 header nav[aria-expanded="true"] .nav-hamburger-icon::before,
