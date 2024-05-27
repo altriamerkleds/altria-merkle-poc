@@ -11,7 +11,7 @@
   --footer-bg-color: #fff;
   --main-content-background-color-1: #ff5200;
   --background-section-image: linear-gradient(#ff5200 1.1%,#ff5200) no-repeat;
-  --warning-border: 6px solid #000;
+  --warning-border: 2px solid #000;
   --warning-background:#fff;
   --warning-color:#000;
   --checkbox-bg: var(--text-color);
@@ -35,7 +35,7 @@
   --footer-link-hover-color: #fff;
   --footer-bg-color: black;
   --background-section-image: url('../images/d-cop-gtc-200-background-or905.jpg');
-  --warning-border:6px solid #fff;
+  --warning-border:2px solid #fff;
   --warning-background:#000;
   --warning-color:#fff;
   --checkbox-bg: var(--background-color);
@@ -59,7 +59,7 @@
   --footer-link-hover-color: #fff;
   --footer-bg-color: black;
   --background-section-image: url('../images/d-cop-gtc-200-background-or905.jpg');
-  --warning-border:6px solid #fff;
+  --warning-border:2px solid #fff;
   --warning-background:#000;
   --warning-color:#fff;
   --scancode-input-color: #ADB5BD;
