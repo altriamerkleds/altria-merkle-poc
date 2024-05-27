@@ -4,6 +4,11 @@ footer {
   font-size: var(--body-font-size-s);
 }
 
+.footer {
+  margin: 0 auto;
+  width:100%;
+}
+
 footer .footer {
   max-width: 1200px;
   margin: auto;
@@ -15,11 +20,6 @@ footer .footer p {
   line-height: 18px;
   margin: 16px 0 0;
   text-align: center;
-}
-
-.footer {
-  margin: 0 auto;
-  width:100%;
 }
 
 .footer div {
