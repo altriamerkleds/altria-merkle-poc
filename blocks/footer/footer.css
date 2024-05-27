@@ -4,11 +4,149 @@ footer {
   font-size: var(--body-font-size-s);
 }
 
+.footer {
+  margin: 0 auto;
+  width:100%;
+}
+
 footer .footer {
-  max-width: 1200px;
   margin: auto;
+  max-width: 1200px;
 }
 
 footer .footer p {
-  margin: 0;
+  color: var(--text-color);
+  font-size: 9px;
+  line-height: 18px;
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.footer div {
+  display: flex;
+}
+
+.footer div > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.footer> div:last-child {
+  margin-top:60px;
+ }
+
+
+.footer div > div:first-child {
+flex-grow:1;
+}
+
+.footer div > div h3 {
+  font-size:13px;
+  text-transform: uppercase;
+}
+
+.footer ul{
+  line-height: 22px;
+  list-style:none;
+  margin: 0 100px 0 0;
+  padding:0;
+}
+
+.footer ul li {
+display:block;
+}
+
+.footer ul li a {
+  color: var(--text-color);
+  }
+    
+.footer div:nth-child(1) div:nth-child(1) img{
+  width:120px;
+}
+  
+.footer div:nth-child(1) div:nth-child(1) table{
+  display:flex;
+}
+
+.footer div:nth-child(1) div:nth-child(1) table img{
+  margin-right:15px;
+  width:30px; 
+}
+ 
+ .footer div:last-child div:last-child ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.footer div:last-child div:last-child ul li {
+  margin-right:20px;
+}
+
+.footer > div:nth-child(1) div:last-child table,
+.footer> div:nth-child(1) div:last-child tbody,
+.footer> div:nth-child(1) div:last-child tr {
+  display:flex;
+}
+
+.footer> div:nth-child(1) div:last-child td {
+  display:flex;
+  flex-direction:column;
+}
+
+@media (width <= 768px) {
+  .footer > div:last-child { 
+    flex-direction: column-reverse;
+    margin-top:25px;
+  }
+
+  .footer > div:first-child {
+    flex-direction: column;
+  }
+
+  .footer div:last-child div:last-child ul {
+    width:100%;
+  }
+}
+
+@media (width <= 640px) {
+  .footer {
+    text-align:center;
+  }
+
+  .footer div:nth-child(1) div:nth-child(1) table {
+    justify-content: center;
+  }
+
+  .footer div:nth-child(1) div:nth-child(1) table img {
+    margin-left:5px;
+    margin-right:5px;
+  }
+
+  .footer ul {
+    margin:0;
+  }
+
+  .footer > div:nth-child(1) {
+    flex-direction: column;
+  }
+
+  .footer > div:nth-child(1) div:last-child table,
+  .footer > div:nth-child(1) div:last-child tbody,
+  .footer > div:nth-child(1) div:last-child tr {
+    flex-direction:column;
+  }
+
+  .footer > div:last-child { 
+    flex-direction: column-reverse;
+    margin-top:25px;
+  }
+
+  .footer div:last-child div:last-child ul {
+    justify-content: center;
+    width:100%;
+  }
 }
