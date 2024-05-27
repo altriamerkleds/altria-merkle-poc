@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.link a {
+    text-decoration: underline;
+}
+
 @media (width >= 992px) {
     .link {
         font-size: 20px;
