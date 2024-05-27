@@ -79,6 +79,7 @@ export default function decorate(block) {
     punchcardWrapper.append(numberDiv);
 
     document.querySelector('.punchcards-numbers').addEventListener('click', (e) => {
+      e.preventDefault();
       const nextSlideIndex = e.target.innerText;
       showItem((nextSlideIndex - 1 + items.length) % items.length);
     });
