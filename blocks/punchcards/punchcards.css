@@ -1,3 +1,7 @@
+.punchcards-container {
+  background:var(--punch-card-bg-color);
+}
+
 .punchcards-wrapper {
   color: var(--punch-card-body-color);
   display: flex;
@@ -18,7 +22,7 @@
 
 .punchcards-wrapper .punchcards .prev-btn,
 .punchcards-wrapper .punchcards .next-btn{
-  color: var(--text-color);
+  color: var(--punch-card-arrow-color);
   cursor: pointer;
   display: inline-block;
   font-size: 48px;

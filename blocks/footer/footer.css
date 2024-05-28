@@ -14,7 +14,7 @@ footer .footer {
 }
 
 footer .footer p {
-  color: var(--text-color);
+  color: var(--footer-text-color);
   font-size: 9px;
   line-height: 18px;
   margin: 16px 0 0;
@@ -52,10 +52,15 @@ display:block;
 }
 
 .footer ul li a {
-  color: var(--text-color);
+  color: var(--footer-link-color);
   font-size: 14px;
   line-height: 28px;
-  }
+  text-transform: uppercase;
+}
+
+.footer ul li a:hover {
+  color: var(--footer-link-hover-color);
+}
     
 .footer div:nth-child(1) div:nth-child(1) img{
   width:120px;

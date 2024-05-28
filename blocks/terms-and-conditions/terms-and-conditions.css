@@ -1,16 +1,25 @@
 .terms-and-conditions {
   width:100%;
+  background: var(--terms-conditions-bg);
+  padding: 25px 0 0 0;
 }
 
 .terms-and-conditions p{
-  color: var(--text-color);
-  font: 400 14px/16px var(--body-font-family);
+  color: var(--terms-conditions-text-color);
+  font: 400 14px/16.8px var(--body-font-family);
   padding: 0 125px;
   text-align: center;
+  margin:0;
 }
 
 .terms-and-conditions p a{
   text-decoration: underline;
+  color: var(--terms-conditions-link-color);
+}
+
+.terms-and-conditions p a:hover{
+  text-decoration: underline;
+  color: var(--terms-conditions-link-hover-color);
 }
 
 @media (width < 768px) {
