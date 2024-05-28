@@ -1,5 +1,13 @@
+.scancode-wrapper {
+  background: var(--scancode-bg-color);
+}
+
 .scancode{
   text-align: center;
+}
+
+.scancode .button-container p {
+  margin:0;
 }
 
 .scancode .input-text{
@@ -7,7 +15,8 @@
 }
 
 .scancode input{
-  background-color: var(--scancode-bg-color);
+  background-color: var(--scancode-input-bg-color);
+  border: 1px solid var(--scancode-input-border-color);
   background-image: url('/images/Vector.png');
   background-repeat: no-repeat;
   background-size: 24px 24px;
@@ -17,10 +26,11 @@
   padding: 10px 0;
   text-indent: 20px;
   width: 310px;
+  outline: none;
 }
 
 .scancode .button-container a.button{
-  background-color: var(--scancode-bg-color);
+  background-color: var(--scancode-btn-bg-color);
   border-radius: 5px;
   color: var(--scancode-btn-color);
   font-size: 18px;

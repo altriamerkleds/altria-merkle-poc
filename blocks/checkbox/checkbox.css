@@ -17,7 +17,7 @@
 }
 
 .checkbox > div {
-  border-bottom:1px solid var(--checkbox-head-bg-color);
+  border-bottom:1px solid var(--checkbox-border-color);
   padding:0 5%;
 }
 
