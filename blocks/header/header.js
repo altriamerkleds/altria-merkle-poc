@@ -128,25 +128,26 @@ export default async function decorate(block) {
       });
     });
   }
-// added code for Warning
+  // added code for Warning
 
   const warningWrapper = nav.querySelector('.warning-container');
   const navBlock = document.querySelector('.header');
   navBlock.before(warningWrapper);
 
-// added code for Header scroll
-
+  // added code for Header scroll
   window.onscroll = function() {myFunction()};
   var header = document.querySelector(".warning-container")
   var sticky = header.offsetTop;
 
   function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
+  if (window.scrollY > sticky) {
+     header.classList.add("sticky");
+    } 
+    else 
+    { 
     header.classList.remove("sticky");
+    }
   }
-}
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
