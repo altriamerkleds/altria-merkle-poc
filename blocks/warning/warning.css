@@ -4,8 +4,6 @@
   box-sizing: border-box;
   display: block;
   left: 0;
-  position: fixed;
-  top: 0;
   text-align: center;
   width: 100%;
   z-index: 3;
@@ -24,6 +22,7 @@
   font-weight: 700;
   line-height: 24px;
   text-align: center;
+  margin: 0;
 }
 
 @media (width >= 992px) {
