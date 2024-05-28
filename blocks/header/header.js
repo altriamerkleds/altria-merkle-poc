@@ -146,7 +146,7 @@ export default async function decorate(block) {
   }
 
   // added code for Header scroll
-  window.onscroll = function () { myFunction(); };
+  window.onscroll = () => { myFunction(); };
 
   // hamburger for mobile
   const hamburger = document.createElement('div');
