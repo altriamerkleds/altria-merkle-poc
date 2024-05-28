@@ -128,8 +128,6 @@ export default async function decorate(block) {
       });
     });
   }
-
-
 // added code for Warning
 
   const warningWrapper = nav.querySelector('.warning-container');
@@ -138,12 +136,11 @@ export default async function decorate(block) {
 
 // added code for Header scroll
 
-window.onscroll = function() {myFunction()};
+  window.onscroll = function() {myFunction()};
+  var header = document.querySelector(".warning-container")
+  var sticky = header.offsetTop;
 
-var header = document.querySelector(".warning-container")
-var sticky = header.offsetTop;
-
-function myFunction() {
+  function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
