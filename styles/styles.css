@@ -49,7 +49,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >= 992px) {
   :root {
     --heading-font-size-xxl: 60px;
     --heading-font-size-xl: 48px;
@@ -58,6 +58,10 @@
     --heading-font-size-s: 24px;
     --heading-font-size-xs: 22px;
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {

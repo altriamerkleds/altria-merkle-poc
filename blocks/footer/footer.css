@@ -84,7 +84,7 @@ display:block;
 }
 
 .footer div:last-child div:last-child ul li {
-  margin-right:20px;
+  margin:0 10px;
 }
 
 .footer > div:nth-child(1) div:last-child table,
@@ -143,11 +143,12 @@ display:block;
 
   .footer > div:last-child { 
     flex-direction: column-reverse;
-    margin-top:25px;
+    margin-top:0px;
   }
 
   .footer div:last-child div:last-child ul {
     justify-content: center;
     width:100%;
+    padding:0 10px;
   }
 }
