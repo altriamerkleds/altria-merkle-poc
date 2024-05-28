@@ -134,20 +134,20 @@ export default async function decorate(block) {
   const navBlock = document.querySelector('.header');
   navBlock.before(warningWrapper);
 
-  // added code for Header scroll
-  window.onscroll = function() {myFunction()};
-  var header = document.querySelector(".warning-container")
-  var sticky = header.offsetTop;
+  const header = document.querySelector('.warning-container');
+  const sticky = header.offsetTop;
 
   function myFunction() {
-  if (window.scrollY > sticky) {
-     header.classList.add("sticky");
-    } 
-    else 
-    { 
-    header.classList.remove("sticky");
+    if (window.scrollY > sticky) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
     }
   }
+
+  // added code for Header scroll
+  window.onscroll = function () { myFunction(); };
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
