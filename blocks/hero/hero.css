@@ -1,3 +1,7 @@
+.hero-wrapper {
+  background:var(--hero-bg);
+}
+
 main .hero-container > div {
   max-width: unset;
 }
@@ -9,7 +13,8 @@ main .hero-container {
 .hero {
   position: relative;
   padding: 32px;
-  min-height: 300px;
+  margin:0 auto;
+  display:block;
 }
 
 .hero h1 {
@@ -20,8 +25,8 @@ main .hero-container {
 }
 
 .hero picture {
-  position: absolute;
-  z-index: -1;
+  position:relative;
+  z-index:1;
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;
@@ -31,4 +36,21 @@ main .hero-container {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-radius:23px;
+}
+
+@media (width >= 992px) {
+  .hero {
+      width: 65%;
+  }
+}
+
+@media (width <= 768px) {
+  .hero {
+      width:86%;
+      padding-bottom:20px;
+  }
+  .hero img {
+    border-radius:10px;
+  }
 }
