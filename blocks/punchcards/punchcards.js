@@ -43,21 +43,22 @@ export default function decorate(block) {
     });
   }
 
-  // Event listeners for buttons
-  document.querySelector('.prev-btn').addEventListener('click', () => {
-    const index = [...items].findIndex((item) => item.classList.contains('active'));
-    showItem((index - 1 + items.length) % items.length);
-  });
-
-  document.querySelector('.next-btn').addEventListener('click', () => {
-    const index = [...items].findIndex((item) => item.classList.contains('active'));
-    showItem((index + 1) % items.length);
-  });
-
   // Numbers code
   const punchcardContainer = document.querySelector('.punchcards-container');
   const punchcardWrapper = document.querySelector('.punchcards-wrapper');
   const punchDataNumberValue = punchcardContainer.getAttribute('data-numbers');
+  const punchCardCount = punchcardContainer.getAttribute('data-puchcardshow');
+
+  // Event listeners for buttons
+  document.querySelector('.prev-btn').addEventListener('click', () => {
+    const index = [...items].findIndex((item) => item.classList.contains('active'));
+    showItem((index - 1 + punchCardCount) % punchCardCount);
+  });
+
+  document.querySelector('.next-btn').addEventListener('click', () => {
+    const index = [...items].findIndex((item) => item.classList.contains('active'));
+    showItem((index + 1) % punchCardCount);
+  });
 
   if (punchDataNumberValue === 'true') {
     const totalLIItems = items.length;
@@ -71,17 +72,19 @@ export default function decorate(block) {
       const numberLi = document.createElement('li');
       numberLi.innerText = i;
       numberLi.className = 'punchcards-numbers';
+      if (i <= punchCardCount) {
+        numberLi.style = 'color: white';
+        numberLi.addEventListener('click', (e) => {
+          e.preventDefault();
+          const nextSlideIndex = e.target.innerText;
+          showItem((nextSlideIndex - 1 + items.length) % items.length);
+        });
+      }
       numberUl.append(numberLi);
       // eslint-disable-next-line no-plusplus
       i++;
     } while (i <= totalLIItems);
     numberDiv.append(numberUl);
     punchcardWrapper.append(numberDiv);
-
-    document.querySelector('.punchcards-numbers').addEventListener('click', (e) => {
-      e.preventDefault();
-      const nextSlideIndex = e.target.innerText;
-      showItem((nextSlideIndex - 1 + items.length) % items.length);
-    });
   }
 }

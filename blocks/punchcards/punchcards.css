@@ -121,6 +121,7 @@
   align-items: center;
   border: 1px solid;
   border-radius: 25px;
+  color:grey;
   display: flex;
   font: 400 12px/14px var(--body-font-family);
   height: 20px;
