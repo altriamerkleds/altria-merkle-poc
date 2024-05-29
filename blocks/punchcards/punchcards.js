@@ -84,7 +84,7 @@ export default function decorate(block) {
       // eslint-disable-next-line no-plusplus
       i++;
     } while (i <= totalLIItems);
-  numberDiv.append(numberUl);
-  punchcardWrapper.append(numberDiv);    
+    numberDiv.append(numberUl);
+    punchcardWrapper.append(numberDiv);
   }
 }
