@@ -12,9 +12,9 @@ main .hero-container {
 
 .hero {
   display:block;
+  margin:0 auto;
   padding: 32px;
   position: relative;
-  margin:0 auto;
 }
 
 .hero h1 {
