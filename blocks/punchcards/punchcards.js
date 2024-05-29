@@ -52,16 +52,9 @@ export default function decorate(block) {
   // Event listeners for buttons
   document.querySelector('.prev-btn').addEventListener('click', () => {
     const index = [...items].findIndex((item) => item.classList.contains('active'));
-    if (index >= 1)
-      {
-        showItem((index - 1));
-      }
-    else
-    {
-     showItem(punchCardCount-1)
-    }
+    if (index >= 1){showItem((index - 1));}
+    else {showItem(punchCardCount-1);}
   });
-
   document.querySelector('.next-btn').addEventListener('click', () => {
     const index = [...items].findIndex((item) => item.classList.contains('active'));
     showItem((index + 1) % punchCardCount);
