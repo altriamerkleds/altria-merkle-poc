@@ -43,6 +43,12 @@ export default function decorate(block) {
     });
   }
 
+  // Numbers code
+   const punchcardContainer = document.querySelector('.punchcards-container');
+   const punchcardWrapper = document.querySelector('.punchcards-wrapper');
+   const punchDataNumberValue = punchcardContainer.getAttribute('data-numbers');
+   const punchCardCount = punchcardContainer.getAttribute('data-puchcardshow');
+
   // Event listeners for buttons
   document.querySelector('.prev-btn').addEventListener('click', () => {
     const index = [...items].findIndex((item) => item.classList.contains('active'));
@@ -54,13 +60,8 @@ export default function decorate(block) {
     showItem((index + 1) % punchCardCount);
   });
 
-  // Numbers code
-  const punchcardContainer = document.querySelector('.punchcards-container');
-  const punchcardWrapper = document.querySelector('.punchcards-wrapper');
-  const punchDataNumberValue = punchcardContainer.getAttribute('data-numbers');
-  const punchCardCount = punchcardContainer.getAttribute('data-puchcardshow');
-
-  if (punchDataNumberValue === 'true') {
+ // 
+  if(punchDataNumberValue === 'true') {
     const totalLIItems = items.length;
     const numberDiv = document.createElement('div');
     const numberUl = document.createElement('ul');
@@ -72,7 +73,7 @@ export default function decorate(block) {
       const numberLi = document.createElement('li');
       numberLi.innerText = i;
       numberLi.className = 'punchcards-numbers';
-      if(i<= punchCardCount) {
+      if(i <= punchCardCount) {
         numberLi.style = 'color: white';
         numberLi.addEventListener('click', (e) => {
           e.preventDefault();
@@ -80,7 +81,6 @@ export default function decorate(block) {
           showItem((nextSlideIndex - 1 + items.length) % items.length);
         });
       }
-      
       numberUl.append(numberLi);
       // eslint-disable-next-line no-plusplus
       i++;
