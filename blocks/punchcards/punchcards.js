@@ -44,10 +44,10 @@ export default function decorate(block) {
   }
 
   // Numbers code
-   const punchcardContainer = document.querySelector('.punchcards-container');
-   const punchcardWrapper = document.querySelector('.punchcards-wrapper');
-   const punchDataNumberValue = punchcardContainer.getAttribute('data-numbers');
-   const punchCardCount = punchcardContainer.getAttribute('data-puchcardshow');
+  const punchcardContainer = document.querySelector('.punchcards-container');
+  const punchcardWrapper = document.querySelector('.punchcards-wrapper');
+  const punchDataNumberValue = punchcardContainer.getAttribute('data-numbers');
+  const punchCardCount = punchcardContainer.getAttribute('data-puchcardshow');
 
   // Event listeners for buttons
   document.querySelector('.prev-btn').addEventListener('click', () => {
@@ -60,8 +60,7 @@ export default function decorate(block) {
     showItem((index + 1) % punchCardCount);
   });
 
- // 
-  if(punchDataNumberValue === 'true') {
+  if (punchDataNumberValue === 'true') {
     const totalLIItems = items.length;
     const numberDiv = document.createElement('div');
     const numberUl = document.createElement('ul');
@@ -73,7 +72,7 @@ export default function decorate(block) {
       const numberLi = document.createElement('li');
       numberLi.innerText = i;
       numberLi.className = 'punchcards-numbers';
-      if(i <= punchCardCount) {
+      if (i <= punchCardCount) {
         numberLi.style = 'color: white';
         numberLi.addEventListener('click', (e) => {
           e.preventDefault();
@@ -85,7 +84,7 @@ export default function decorate(block) {
       // eslint-disable-next-line no-plusplus
       i++;
     } while (i <= totalLIItems);
-    numberDiv.append(numberUl);
-    punchcardWrapper.append(numberDiv);    
+  numberDiv.append(numberUl);
+  punchcardWrapper.append(numberDiv);    
   }
 }
