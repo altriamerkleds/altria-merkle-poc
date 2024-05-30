@@ -34,12 +34,28 @@ export default function decorate(block) {
   carousel.prepend(prev);
   carousel.append(next);
 
+  function showPunchCount(punchCount) {
+    console.log(`punchCount = ${punchCount}`);
+    const totalCount = 10;
+    // eslint-disable-next-line no-plusplus
+    for (let i = 1; i <= totalCount; i++) {
+      if (i > punchCount) {
+        document.querySelector(`.punchcards-numberlist .punchcards-numbers:nth-child(${i})`).style.color = 'gray';
+      }
+
+      for (let j = 1; j <= punchCount; j++) {
+        document.querySelector(`.punchcards-numberlist .punchcards-numbers:nth-child(${j})`).style.color = '#fff';
+      }
+    }
+  }
+
   function showItem(index) {
     items.forEach((item, idx) => {
       item.classList.remove('active');
       if (idx === index) {
         item.classList.add('active');
         console.log(item.lastChild.innerText);
+        showPunchCount(item.lastChild.innerText);
       }
     });
   }
@@ -59,18 +75,11 @@ export default function decorate(block) {
   document.querySelector('.next-btn').addEventListener('click', () => {
     const index = [...items].findIndex((item) => item.classList.contains('active'));
     // const punchCount= [...items].findPunch((punch) => punch.lastChild.innerText);
-    const punchCount = document.querySelector('.punchcards ul li').lastChild.innerText;
-    console.log(`${punchCount}element`);
-    showPunchCount(punchCount);
+    // const punchCount = document.querySelector('.punchcards ul li').lastChild.innerText;
+    // console.log(`${punchCount}element`);
+    // showPunchCount(punchCount);
     showItem((index + 1) % items.length);
   });
-  function showPunchCount(punchCount) {
-    console.log(`punchCount = ${punchCount}`);
-    // eslint-disable-next-line no-plusplus
-    for (let j = 1; j <= punchCount; j++) {
-      document.querySelector(`.punchcards-numberlist .punchcards-numbers:nth-child(${j})`).style.color = '#fff';
-    }
-  }
 
   if (punchDataNumberValue === 'true') {
     const totalLIItems = items.length;
