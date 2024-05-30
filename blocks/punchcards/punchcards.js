@@ -39,7 +39,7 @@ export default function decorate(block) {
       item.classList.remove('active');
       if (idx === index) {
         item.classList.add('active');
-        console.log(item.lastChild.innerText)
+        console.log(item.lastChild.innerText);
       }
     });
   }
@@ -53,23 +53,25 @@ export default function decorate(block) {
   // Event listeners for buttons
   document.querySelector('.prev-btn').addEventListener('click', () => {
     const index = [...items].findIndex((item) => item.classList.contains('active'));
-    //if (index >= 1) { showItem((index - 1)); } else { showItem(items.length - 1); }
+    // if (index >= 1) { showItem((index - 1)); } else { showItem(items.length - 1); }
     showItem((index - 1 + items.length) % items.length);
   });
   document.querySelector('.next-btn').addEventListener('click', () => {
     const index = [...items].findIndex((item) => item.classList.contains('active'));
-    //const punchCount= [...items].findPunch((punch) => punch.lastChild.innerText);
+    // const punchCount= [...items].findPunch((punch) => punch.lastChild.innerText);
     const punchCount = document.querySelector('.punchcards ul li').lastChild.innerText;
-    console.log(punchCount + "element");
+    console.log(`${punchCount}element`);
     showPunchCount(punchCount);
     showItem((index + 1) % items.length);
   });
-function showPunchCount(punchCount){
-let j =1;
-if (j <= punchCount) {
-  document.querySelector('.punchcards-numberlist .punchcards-numbers').style.color='#fff';
-}
-}
+  function showPunchCount(punchCount) {
+    console.log(`punchCount = ${punchCount}`);
+    // eslint-disable-next-line no-plusplus
+    for (let j = 1; j <= punchCount; j++) {
+      document.querySelector(`.punchcards-numberlist .punchcards-numbers:nth-child(${j})`).style.color = '#fff';
+    }
+  }
+
   if (punchDataNumberValue === 'true') {
     const totalLIItems = items.length;
     const numberDiv = document.createElement('div');
@@ -82,14 +84,14 @@ if (j <= punchCount) {
       const numberLi = document.createElement('li');
       numberLi.innerText = i;
       numberLi.className = 'punchcards-numbers';
-       //if (i <= punchCount) {
-        // numberLi.style.color = '#ffffff';
+      // if (i <= punchCount) {
+      // numberLi.style.color = '#ffffff';
       //   numberLi.addEventListener('click', (e) => {
       //     e.preventDefault();
       //     const nextSlideIndex = e.target.innerText;
       //     showItem((nextSlideIndex - 1 + items.length) % items.length);
       //   });
-       //}
+      // }
       numberUl.append(numberLi);
       // eslint-disable-next-line no-plusplus
       i++;
