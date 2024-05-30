@@ -1,3 +1,7 @@
+.hero-wrapper {
+  background:var(--hero-bg);
+}
+
 main .hero-container > div {
   max-width: unset;
 }
@@ -7,28 +11,47 @@ main .hero-container {
 }
 
 .hero {
-  position: relative;
+  display:block;
+  margin:0 auto;
   padding: 32px;
-  min-height: 300px;
+  position: relative;
 }
 
 .hero h1 {
-  max-width: 1200px;
+  color: white;
   margin-left: auto;
   margin-right: auto;
-  color: white;
+  max-width: 1200px;
 }
 
 .hero picture {
-  position: absolute;
-  z-index: -1;
+  box-sizing: border-box;
   inset: 0;
   object-fit: cover;
-  box-sizing: border-box;
+  position:relative;
+  z-index:1; 
 }
 
 .hero img {
-  object-fit: cover;
-  width: 100%;
+  border-radius:23px;
   height: 100%;
+  object-fit: cover;
+  width: 100%; 
+}
+
+@media (width >= 992px) {
+  .hero {
+      width: 65%;
+  }
+}
+
+@media (width <= 768px) {
+  .hero {
+      padding-bottom:20px;
+      width:86%;
+  }
+
+  .hero img {
+    border-radius:10px;
+  }
 }

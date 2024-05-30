@@ -38,6 +38,7 @@
   --link-hover-color:#F9520A;
   --textblock-bg-color:#fff;
   --textblock-color:#000;
+  --hero-bg:#fff;
 }
 
 .copenhagen{
@@ -79,6 +80,7 @@
   --link-hover-color:#fff;
   --textblock-bg-color:#000;
   --textblock-color:#fff;
+  --hero-bg:#000;
 }
 
 .whitelabel{
