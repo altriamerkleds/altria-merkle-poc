@@ -18,6 +18,7 @@
 
 .warning p {
   color:var(--warning-color);
+  font-family:var(--warning-font);
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;

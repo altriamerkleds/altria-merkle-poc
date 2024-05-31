@@ -1,6 +1,6 @@
 .onsite{
   --text-color: #454545;
-  --body-font-family: "ArialMTBlack";
+  --body-font-family: 'nexa-light';
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: var(--body-font-family);
   --btn-bg-color: #F9520A;
@@ -19,6 +19,7 @@
   --warning-border: 2px solid #000;
   --warning-background:#fff;
   --warning-color:#000;
+  --warning-font:'nexa-bold';
   --scancode-input-bg-color: #F8F9FA;
   --scancode-input-border-color: #aeb0b4;
   --scancode-input-color: #ADB5BD;
@@ -33,12 +34,14 @@
   --punch-card-body-color: var(--background-color);
   --punch-card-bg-color:#fff;
   --punch-card-arrow-color:#000;
+  --punch-card-arrow-font:'roboto';
   --link-block-bg:#fff;
   --link-color:#000;
   --link-hover-color:#F9520A;
   --textblock-bg-color:#fff;
   --textblock-color:#000;
   --hero-bg:#fff;
+  --header-nav-font:'nexa-bold';
   --punchcard-count-color:#fff;
 }
 
@@ -62,6 +65,7 @@
   --warning-border:2px solid #fff;
   --warning-background:#000;
   --warning-color:#fff;
+  --warning-font:var(--body-font-family);
   --scancode-input-bg-color: #F8F9FA;
   --scancode-input-border-color: #F8F9FA;
   --scancode-input-color: #ADB5BD;
@@ -76,12 +80,14 @@
   --punch-card-body-color: var(--background-color);
   --punch-card-bg-color:#000;
   --punch-card-arrow-color:#fff;
+  --punch-card-arrow-font:'roboto';
   --link-block-bg:#000;
   --link-color:#8b713c;
   --link-hover-color:#fff;
   --textblock-bg-color:#000;
   --textblock-color:#fff;
   --hero-bg:#000;
+  --header-nav-font:var(--body-font-family);
   --punchcard-count-color:#fff;
 }
 
@@ -105,6 +111,7 @@
   --warning-border:2px solid #fff;
   --warning-background:#000;
   --warning-color:#fff;
+  --warning-font:var(--body-font-family);
   --scancode-input-bg-color: #F8F9FA;
   --scancode-input-border-color: #F8F9FA;
   --scancode-input-color: #ADB5BD;
@@ -119,10 +126,12 @@
   --punch-card-body-color: var(--text-color);
   --punch-card-bg-color: #000;
   --punch-card-arrow-color:#fff;
+  --punch-card-arrow-font:'roboto';
   --link-block-bg:#000;
   --link-color:#fff;
   --link-hover-color:#fff;
   --textblock-bg-color:#000;
   --textblock-color:#fff;
+  --header-nav-font:var(--body-font-family);
   --punchcard-count-color:#fff;
 }

@@ -25,6 +25,7 @@
   color: var(--punch-card-arrow-color);
   cursor: pointer;
   display: inline-block;
+  font-family:var(--punch-card-arrow-font);
   font-size: 48px;
   font-weight: 900;
   height: 30px;
