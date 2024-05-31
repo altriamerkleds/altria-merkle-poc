@@ -39,6 +39,7 @@
   --textblock-bg-color:#fff;
   --textblock-color:#000;
   --hero-bg:#fff;
+  --punchcard-count-color:#fff;
 }
 
 .copenhagen{
@@ -81,6 +82,7 @@
   --textblock-bg-color:#000;
   --textblock-color:#fff;
   --hero-bg:#000;
+  --punchcard-count-color:#fff;
 }
 
 .whitelabel{
@@ -122,4 +124,5 @@
   --link-hover-color:#fff;
   --textblock-bg-color:#000;
   --textblock-color:#fff;
+  --punchcard-count-color:#fff;
 }
