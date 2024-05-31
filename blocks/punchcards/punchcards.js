@@ -10,7 +10,7 @@ export default function decorate(block) {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'punchcard-image';
       else div.className = 'punchcard-body';
       if (div.children.length === 3) {
-        li.lastChild.style.display='none';
+        li.lastChild.style.display = 'none';
       }
     });
     ul.append(li);
