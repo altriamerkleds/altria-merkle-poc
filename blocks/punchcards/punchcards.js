@@ -2,7 +2,6 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   /* change to ul, li */
-  let garbage = [];
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
@@ -12,7 +11,6 @@ export default function decorate(block) {
       else div.className = 'punchcard-body';
       if (div.children.length === 3) {
         li.lastChild.style.display='none';
-        garbage = li.lastChild.lastChild.innerText;
       }
     });
     ul.append(li);
@@ -20,13 +18,11 @@ export default function decorate(block) {
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false)));
   block.textContent = '';
   block.append(ul);
-  
   function decode(encodedString) {
     const tmpElement = document.createElement('span');
     tmpElement.innerHTML = encodedString;
     return tmpElement.innerHTML;
   }
-
   const carousel = document.querySelector('.punchcards');
   const items = carousel.querySelectorAll('li');
   carousel.querySelector('li:first-child').className = 'active';
