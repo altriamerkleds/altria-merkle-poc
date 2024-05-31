@@ -4,6 +4,6 @@ export default function iframe(block) {
   const inputEl = [...block.firstElementChild.children];
   const iframeValue = inputEl[0].children[0].innerHTML;
   container.firstElementChild.append(ifrm);
-  ifrm.setAttribute("src", iframeValue);
+  ifrm.setAttribute('src', iframeValue);
   inputEl[0].children[0].classList.add('iframe-value');
 }
