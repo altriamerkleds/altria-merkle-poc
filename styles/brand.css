@@ -42,6 +42,7 @@
   --textblock-color:#000;
   --hero-bg:#fff;
   --header-nav-font:'nexa-bold';
+  --punchcard-count-color:#fff;
 }
 
 .copenhagen{
@@ -87,6 +88,7 @@
   --textblock-color:#fff;
   --hero-bg:#000;
   --header-nav-font:var(--body-font-family);
+  --punchcard-count-color:#fff;
 }
 
 .whitelabel{
@@ -131,4 +133,5 @@
   --textblock-bg-color:#000;
   --textblock-color:#fff;
   --header-nav-font:var(--body-font-family);
+  --punchcard-count-color:#fff;
 }
