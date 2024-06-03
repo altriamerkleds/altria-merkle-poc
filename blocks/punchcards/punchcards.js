@@ -45,9 +45,8 @@ export default function decorate(block) {
   }
 
   // Numbers code
-  const punchcardContainer = document.querySelector('.punchcards-container');
   const punchcardWrapper = document.querySelector('.punchcards-wrapper');
-  const punchDataNumberValue = punchcardContainer.getAttribute('data-numbers');
+
   // Event listeners for buttons
   document.querySelector('.prev-btn').addEventListener('click', () => {
     const index = [...items].findIndex((item) => item.classList.contains('active'));
@@ -58,23 +57,21 @@ export default function decorate(block) {
     showItem((index + 1) % items.length);
   });
 
-  if (punchDataNumberValue === 'true') {
-    const cardPunchCount = 10;
-    const numberDiv = document.createElement('div');
-    const numberUl = document.createElement('ul');
-    numberDiv.className = 'punchcards-numbers';
-    numberUl.className = 'punchcards-numberlist';
+  const cardPunchCount = 10;
+  const numberDiv = document.createElement('div');
+  const numberUl = document.createElement('ul');
+  numberDiv.className = 'punchcards-numbers';
+  numberUl.className = 'punchcards-numberlist';
 
-    let i = 1;
-    do {
-      const numberLi = document.createElement('li');
-      numberLi.innerText = i;
-      numberLi.className = 'punchcards-numbers';
-      numberUl.append(numberLi);
-      // eslint-disable-next-line no-plusplus
-      i++;
-    } while (i <= cardPunchCount);
-    numberDiv.append(numberUl);
-    punchcardWrapper.append(numberDiv);
-  }
+  let i = 1;
+  do {
+    const numberLi = document.createElement('li');
+    numberLi.innerText = i;
+    numberLi.className = 'punchcards-numbers';
+    numberUl.append(numberLi);
+    // eslint-disable-next-line no-plusplus
+    i++;
+  } while (i <= cardPunchCount);
+  numberDiv.append(numberUl);
+  punchcardWrapper.append(numberDiv);
 }
