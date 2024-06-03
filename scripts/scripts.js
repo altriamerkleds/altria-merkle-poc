@@ -141,8 +141,12 @@ function loadDelayed() {
  * For brand specific update favicon
  */
 function updateMeta() {
-  const metaFavicon = document.querySelector('meta[name="favicon"]').getAttribute('content');
-  document.querySelector('link[rel="icon"]').setAttribute('href', metaFavicon);
+  const favData = document.querySelector('meta[name="favicon"]');
+  //To validate if favicon is valid/null or not
+  if (favData) {
+    const metaFavicon = favData.getAttribute('content');
+    document.querySelector('link[rel="icon"]').setAttribute('href', metaFavicon);
+  }
 }
 
 async function loadPage() {
