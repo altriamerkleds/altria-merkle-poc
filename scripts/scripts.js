@@ -142,7 +142,7 @@ function loadDelayed() {
  */
 function updateMeta() {
   const favData = document.querySelector('meta[name="favicon"]');
-  //To validate if favicon is valid/null or not
+  // To validate if favicon is valid/null or not
   if (favData) {
     const metaFavicon = favData.getAttribute('content');
     document.querySelector('link[rel="icon"]').setAttribute('href', metaFavicon);
