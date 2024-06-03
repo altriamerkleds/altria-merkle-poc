@@ -1,0 +1,58 @@
+.scancode-wrapper {
+  background: var(--scancode-bg-color);
+}
+
+.scancode{
+  text-align: center;
+}
+
+.scancode .button-container p {
+  margin:0;
+}
+
+.scancode .input-text{
+  display: none;
+}
+
+.scancode input{
+  background-color: var(--scancode-input-bg-color);
+  border: 1px solid var(--scancode-input-border-color);
+  background-image: url('/images/Vector.png');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 98%;
+  border-radius: 5px;
+  color: var(--scancode-input-color);
+  padding: 10px 0;
+  text-indent: 20px;
+  width: 310px;
+  outline: none;
+}
+
+.scancode .button-container a.button{
+  background-color: var(--scancode-btn-bg-color);
+  border-radius: 5px;
+  color: var(--scancode-btn-color);
+  font-size: 18px;
+  font-weight: 700;
+  height: 44px;
+  width: 310px;
+  line-height: 18px;
+  Padding: 10px 0 10px 80px;
+  word-spacing: 100px; 
+}
+
+@media (width >= 992px) {
+  .scancode input{
+    background-size:34px 34px;
+    width: 574px;
+  }
+
+  .scancode .button-container a.button{
+    font-size: 36px;
+    height: 80px;
+    line-height: 36px;
+    padding: 20px 0 20px 100px;
+    width: 463px;
+  }
+}

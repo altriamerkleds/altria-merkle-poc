@@ -83,9 +83,20 @@ async function loadEager(doc) {
     await waitForLCP(LCP_BLOCKS);
   }
 
+  const pagePath = window.location.href;
+
+  if (pagePath.indexOf('/onsite') > -1) {
+    document.body.classList.add('onsite');
+  } else if (pagePath.indexOf('/copenhagen') > -1) {
+    document.body.classList.add('copenhagen');
+    document.querySelector('link[rel = "icon"]').href = '../images/eye_open.png';
+  } else {
+    document.body.classList.add('whitelabel');
+  }
+
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
-    if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
+    if (window.innerWidth >= 992 || sessionStorage.getItem('fonts-loaded')) {
       loadFonts();
     }
   } catch (e) {
@@ -122,13 +133,26 @@ async function loadLazy(doc) {
  */
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  window.setTimeout(() => import('./delayed.js'), 500);
   // load anything that can be postponed to the latest here
+}
+
+/**
+ * For brand specific update favicon
+ */
+function updateMeta() {
+  const favData = document.querySelector('meta[name="favicon"]');
+  // To validate if favicon is valid/null or not
+  if (favData) {
+    const metaFavicon = favData.getAttribute('content');
+    document.querySelector('link[rel="icon"]').setAttribute('href', metaFavicon);
+  }
 }
 
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
+  await updateMeta(document);
   loadDelayed();
 }
 

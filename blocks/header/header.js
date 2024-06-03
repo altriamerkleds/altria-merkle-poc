@@ -2,7 +2,7 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
-const isDesktop = window.matchMedia('(min-width: 900px)');
+const isDesktop = window.matchMedia('(min-width: 992px)');
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -128,6 +128,25 @@ export default async function decorate(block) {
       });
     });
   }
+  // added code for Warning
+
+  const warningWrapper = nav.querySelector('.warning-container');
+  const navBlock = document.querySelector('.header');
+  navBlock.before(warningWrapper);
+
+  const header = document.querySelector('.warning-container');
+  const sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.scrollY > sticky) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  }
+
+  // added code for Header scroll
+  window.onscroll = () => { myFunction(); };
 
   // hamburger for mobile
   const hamburger = document.createElement('div');

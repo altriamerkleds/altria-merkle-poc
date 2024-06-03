@@ -745,6 +745,8 @@ init();
 export {
   buildBlock,
   createOptimizedPicture,
+  loadFooter,
+  loadHeader,
   decorateBlock,
   decorateBlocks,
   decorateButtons,
@@ -756,8 +758,6 @@ export {
   loadBlock,
   loadBlocks,
   loadCSS,
-  loadFooter,
-  loadHeader,
   loadScript,
   readBlockConfig,
   sampleRUM,
