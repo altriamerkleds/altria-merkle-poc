@@ -1,0 +1,12 @@
+{
+  "project": "Rosalind",
+  "plugins": [
+    {
+      "id": "library",
+      "title": "Library",
+      "environments": ["edit"],
+      "url": "https://develop--altria-merkle-poc--altriamerkleds.hlx.live/tools/sidekick/library.html",
+      "includePaths": ["**.docx**"]
+    }
+  ]
+}
