@@ -25,37 +25,36 @@ function checkAuth() {
   const token = localStorage.getItem('authToken');
   return token !== null;
 }
-  // Check authenticatation
+// Check authenticatation
 const isAuthenticated = checkAuth();
 
-  // If the user is on the login page and authenticated, redirect to the home page
+// If the user is on the login page and authenticated, redirect to the home page
 if (!isAuthenticated) {
-    window.location.href = '/login';
-    }
+  window.location.href = '/login';
+}
 
-  // Timeout logic
+// Timeout logic
 const activityEvents = ['click', 'mousemove', 'keypress', 'scroll', 'touchstart'];
 const logoutAfterInactivity = () => {
-    localStorage.removeItem('authToken');
-    window.location.href = 'login';
-    };
+  localStorage.removeItem('authToken');
+  window.location.href = 'login';
+};
 
 const resetTimeout = () => {
-    if (!checkAuth()) {
-      return;
-    }
-    setTimeout(logoutAfterInactivity, 900000);
+  if (!checkAuth()) {
+    return;
+  }
+  setTimeout(logoutAfterInactivity, 900000);
 };
 
 const addActivityListeners = () => {
-    activityEvents.forEach((event) => {
-      document.addEventListener(event, resetTimeout);
+  activityEvents.forEach((event) => {
+  document.addEventListener(event, resetTimeout);
   });
 };
 
 addActivityListeners();
 resetTimeout();
- 
 function sampleRUM(checkpoint, data = {}) {
   const SESSION_STORAGE_KEY = 'aem-rum';
   sampleRUM.baseURL = sampleRUM.baseURL
