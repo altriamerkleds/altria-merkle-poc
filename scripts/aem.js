@@ -27,9 +27,10 @@ function checkAuth() {
 }
 // Check authenticatation
 const isAuthenticated = checkAuth();
+const currentPath = window.location.pathname;
 
-// If the user is on the login page and authenticated, redirect to the home page
-if (!isAuthenticated) {
+// If the user is on the non-login page and non-authenticated, redirect to the login page
+if (currentPath !== '/login' && !isAuthenticated) {
   window.location.href = '/login';
 }
 
