@@ -64,7 +64,7 @@ export default function decorate(block) {
 
   // Handle login form
   const loginForm = document.getElementById('loginForm');
-  loginForm.addEventListener('submit', event => {
+  loginForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const enteredUsername = event.target.username.value;
     const enteredPassword = event.target.password.value;
