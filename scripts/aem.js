@@ -21,6 +21,43 @@
  * @param {string} data.target subject of the checkpoint event,
  * for instance the href of a link, or a search term
  */
+function checkAuth() {
+  const token = localStorage.getItem('authToken');
+  return token !== null;
+}
+  // Check authenticatation
+  const isAuthenticated = checkAuth();
+  const currentPath = window.location.pathname;
+
+  // If the user is on the login page and authenticated, redirect to the home page
+  if (!isAuthenticated) {
+    // localStorage.setItem('redirect urls', currentPath);
+    window.location.href = '/login';
+  }
+
+  // Timeout logic
+  const activityEvents = ['click', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+  const logoutAfterInactivity = () => {
+    localStorage.removeItem('authToken');
+    window.location.href = 'login';
+  };
+
+  const resetTimeout = () => {
+    if (!checkAuth()) {
+      return;
+    }
+    setTimeout(logoutAfterInactivity, 900000);
+  };
+
+  const addActivityListeners = () => {
+    activityEvents.forEach((event) => {
+      document.addEventListener(event, resetTimeout);
+    });
+  };
+
+  addActivityListeners();
+  resetTimeout();  
+
 function sampleRUM(checkpoint, data = {}) {
   const SESSION_STORAGE_KEY = 'aem-rum';
   sampleRUM.baseURL = sampleRUM.baseURL
