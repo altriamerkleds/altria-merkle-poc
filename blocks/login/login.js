@@ -38,30 +38,6 @@ export default function decorate(block) {
     }
   });
 
-  function checkAuth() {
-    const token = localStorage.getItem('authToken');
-    if (token != null) {
-      document.querySelector('.login-wrapper .login').style.display = 'none';
-    }
-    return token !== null;
-  }
-
-  // Check authenticatation
-  const isAuthenticated = checkAuth();
-
-  const currentPath = window.location.pathname;
-  if (currentPath === '/develop' && isAuthenticated) {
-    window.location.href = '/develop';
-  }
-  if (currentPath !== '/login' && !isAuthenticated) {
-    window.location.href = '/login';
-  }
-
-  // If the user is on the login page and authenticated, redirect to the home page
-  if (currentPath === '/login' && isAuthenticated) {
-    window.location.href = '/';
-  }
-
   // Handle login form
   const loginForm = document.getElementById('loginForm');
   loginForm.addEventListener('submit', (event) => {
@@ -77,26 +53,4 @@ export default function decorate(block) {
       alert('Invalid credentials');
     }
   });
-  // Timeout logic
-  const activityEvents = ['click', 'mousemove', 'keypress', 'scroll', 'touchstart'];
-  const logoutAfterInactivity = () => {
-    localStorage.removeItem('authToken');
-    window.location.href = 'login';
-  };
-
-  const resetTimeout = () => {
-    if (!checkAuth()) {
-      return;
-    }
-    setTimeout(logoutAfterInactivity, 20000);
-  };
-
-  const addActivityListeners = () => {
-    activityEvents.forEach((event) => {
-      document.addEventListener(event, resetTimeout);
-    });
-  };
-
-  addActivityListeners();
-  resetTimeout();
 }
