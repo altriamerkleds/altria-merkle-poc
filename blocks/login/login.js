@@ -69,7 +69,7 @@ export default function decorate(block) {
     event.preventDefault();
     const enteredUsername = event.target.username.value;
     const enteredPassword = event.target.password.value;
-    const authenticated = userCredentials.some((cred) =>cred.username === enteredUsername && cred.password === enteredPassword);
+    const authenticated = userCredentials.some((cred) => cred.username === enteredUsername && cred.password === enteredPassword);
     if (authenticated) {
       localStorage.setItem('authToken', 'your-auth-token');
       window.location.href = '/';
@@ -77,10 +77,8 @@ export default function decorate(block) {
       alert('Invalid credentials');
     }
   });
-  
   // Timeout logic
-
-  const activityEvents = ['click','mousemove','keypress','scroll','touchstart'];
+  const activityEvents = ['click', 'mousemove', 'keypress', 'scroll', 'touchstart'];
   const logoutAfterInactivity = () => {
     localStorage.removeItem('authToken');
     window.location.href = 'login';
@@ -90,7 +88,7 @@ export default function decorate(block) {
     if (!checkAuth()) {
       return;
     }
-  setTimeout(logoutAfterInactivity, 20000);
+    setTimeout(logoutAfterInactivity, 20000);
   };
 
   const addActivityListeners = () => {
@@ -101,5 +99,4 @@ export default function decorate(block) {
 
   addActivityListeners();
   resetTimeout();
-
 }
