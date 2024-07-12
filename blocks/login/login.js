@@ -1,34 +1,25 @@
 export default function decorate(block) {
-
     const userCredentials = [];
-
     const container = document.querySelector('.login');
-
     const userForm = document.createElement('form');
-    userForm.setAttribute("id","loginForm");
-
+    userForm.setAttribute("id", "loginForm");
     const labelInput = document.createElement('label');
-    labelInput.innerHTML = "User Name";
-
+    labelInput.innerHTML = 'User Name';
     const userInput = document.createElement('input');
-    userInput.type = "text";
-    userInput.name = "username";
-    userInput.id = "username";
-    userInput.placeholder = "Enter a UserName";
-
+    userInput.type = 'text';
+    userInput.name = 'username';
+    userInput.id = 'username';
+    userInput.placeholder = 'Enter a UserName';
     const pwdLabel = document.createElement('label');
-    pwdLabel.innerHTML = "Password";
-
+    pwdLabel.innerHTML = 'Password';
     const pwdInput = document.createElement('input');
-    pwdInput.type = "password";
-    pwdInput.name = "password";
-    pwdInput.id = "password";
-    pwdInput.placeholder = "Enter a Password";
-
+    pwdInput.type = 'password';
+    pwdInput.name = 'password';
+    pwdInput.id = 'password';
+    pwdInput.placeholder = 'Enter a Password';
     const btnInput = document.createElement('button');
-    btnInput.type = "submit";
-    btnInput.innerHTML = "Login";
-
+    btnInput.type = 'submit';
+    btnInput.innerHTML = 'Login';
     container.append(userForm);
     userForm.appendChild(labelInput);
     userForm.appendChild(userInput);
