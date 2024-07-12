@@ -64,11 +64,11 @@ export default function decorate(block) {
 
   // Handle login form
   const loginForm = document.getElementById('loginForm');
-  loginForm.addEventListener('submit', function(event) {
+  loginForm.addEventListener('submit', function(event){
     event.preventDefault();
     const enteredUsername = event.target.username.value;
     const enteredPassword = event.target.password.value;
-    const authenticated = userCredentials.some((cred) => cred.username === enteredUsername 
+    const authenticated = userCredentials.some((cred) => cred.username === enteredUsername
     && cred.password === enteredPassword);
     if (authenticated) {
       localStorage.setItem('authToken', 'your-auth-token');
