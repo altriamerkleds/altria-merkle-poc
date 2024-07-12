@@ -49,7 +49,7 @@ const resetTimeout = () => {
 
 const addActivityListeners = () => {
   activityEvents.forEach((event) => {
-  document.addEventListener(event, resetTimeout);
+    document.addEventListener(event, resetTimeout);
   });
 };
 
