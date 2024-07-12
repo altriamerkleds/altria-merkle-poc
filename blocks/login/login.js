@@ -53,5 +53,4 @@ export default function decorate(block) {
       alert('Invalid credentials');
     }
   });
-
 }
