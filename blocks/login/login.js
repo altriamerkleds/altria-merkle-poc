@@ -38,6 +38,14 @@ export default function decorate(block) {
     }
   });
 
+  function checkAuth() {
+    const token = localStorage.getItem('authToken');
+    if (token != null) {
+      document.querySelector('.login-wrapper .login').style.display = 'none';
+    }
+    return token !== null;
+  }
+
   // Check authenticatation
   const isAuthenticated = checkAuth();
 
@@ -72,18 +80,26 @@ export default function decorate(block) {
       alert('Invalid credentials');
     }
   });
-
-  function checkAuth() {
-    const token = localStorage.getItem('authToken');
-    if (token != null) {
-      document.querySelector('.login-wrapper .login').style.display = 'none';
-    }
-    return token !== null;
-  }
-
+  
   // Timeout logic
 
   let timeout;
+  const activityEvents = [
+    'click',
+    'mousemove',
+    'keypress',
+    'scroll',
+    'touchstart',
+  ];
+
+  const resetTimeout = () => {
+    if (!checkAuth()) {
+      removeActivityListeners();
+      return;
+    }
+    timeout = setTimeout(logoutAfterInactivity, 20000);
+  };
+
   const addActivityListeners = () => {
     activityEvents.forEach((event) => {
       document.addEventListener(event, resetTimeout);
@@ -100,22 +116,6 @@ export default function decorate(block) {
     localStorage.removeItem('authToken');
     window.location.href = 'login';
   };
-
-  const resetTimeout = () => {
-    if (!checkAuth()) {
-      removeActivityListeners();
-      return;
-    }
-    timeout = setTimeout(logoutAfterInactivity, 20000);
-  };
-
-  const activityEvents = [
-    'click',
-    'mousemove',
-    'keypress',
-    'scroll',
-    'touchstart',
-  ];
 
   addActivityListeners();
   resetTimeout();
