@@ -23,14 +23,15 @@
  */
 function checkAuth() {
   const token = localStorage.getItem('authToken');
+  const currentPath = window.location.pathname;
   return token !== null;
 }
 // Check authenticatation
 const isAuthenticated = checkAuth();
 
 // If the user is on the login page and authenticated, redirect to the home page
-if (!isAuthenticated) {
-  window.location.href = '/login';
+if (currentPath !== '/login' && !isAuthenticated) {
+    window.location.href = '/login';
 }
 
 // Timeout logic
