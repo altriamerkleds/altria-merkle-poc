@@ -42,22 +42,22 @@ export default function decorate(block) {
   const isAuthenticated = checkAuth();
 
   const currentPath = window.location.pathname;
-  if (currentPath === "/develop" && isAuthenticated) {
-    window.location.href = "/develop";
+  if (currentPath === '/develop' && isAuthenticated) {
+    window.location.href = '/develop';
   }
-  if (currentPath !== "/login" && !isAuthenticated) {
-    window.location.href = "/login";
+  if (currentPath !== '/login' && !isAuthenticated) {
+    window.location.href = '/login';
   }
 
   // If the user is on the login page and authenticated, redirect to the home page
-  if (currentPath === "/login" && isAuthenticated) {
-    window.location.href = "/";
+  if (currentPath === '/login' && isAuthenticated) {
+    window.location.href = '/';
   }
 
   // Handle login form
-  const loginForm = document.getElementById("loginForm");
+  const loginForm = document.getElementById('loginForm');
 
-  loginForm.addEventListener("submit", function (event) {
+  loginForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const enteredUsername = event.target.username.value;
     const enteredPassword = event.target.password.value;
@@ -66,17 +66,17 @@ export default function decorate(block) {
         cred.username === enteredUsername && cred.password === enteredPassword
     );
     if (authenticated) {
-      localStorage.setItem("authToken", "your-auth-token");
-      window.location.href = "/";
+      localStorage.setItem('authToken', 'your-auth-token');
+      window.location.href = '/';
     } else {
-      alert("Invalid credentials");
+      alert('Invalid credentials');
     }
   });
 
   function checkAuth() {
-    const token = localStorage.getItem("authToken");
+    const token = localStorage.getItem('authToken');
     if (token != null) {
-      document.querySelector(".login-wrapper .login").style.display = "none";
+      document.querySelector('.login-wrapper .login').style.display = 'none';
     }
     return token !== null;
   }
@@ -84,27 +84,6 @@ export default function decorate(block) {
   // Timeout logic
 
   let timeout;
-  const logoutAfterInactivity = () => {
-    localStorage.removeItem("authToken");
-    window.location.href = "login";
-  };
-
-  const resetTimeout = () => {
-    if (!checkAuth()) {
-      removeActivityListeners();
-      return;
-    }
-    timeout = setTimeout(logoutAfterInactivity, 20000);
-  };
-
-  const activityEvents = [
-    "click",
-    "mousemove",
-    "keypress",
-    "scroll",
-    "touchstart",
-  ];
-
   const addActivityListeners = () => {
     activityEvents.forEach((event) => {
       document.addEventListener(event, resetTimeout);
@@ -117,6 +96,28 @@ export default function decorate(block) {
     });
   };
 
+  const logoutAfterInactivity = () => {
+    localStorage.removeItem('authToken');
+    window.location.href = 'login';
+  };
+
+  const resetTimeout = () => {
+    if (!checkAuth()) {
+      removeActivityListeners();
+      return;
+    }
+    timeout = setTimeout(logoutAfterInactivity, 20000);
+  };
+
+  const activityEvents = [
+    'click',
+    'mousemove',
+    'keypress',
+    'scroll',
+    'touchstart',
+  ];
+
   addActivityListeners();
   resetTimeout();
+
 }
