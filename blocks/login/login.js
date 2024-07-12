@@ -69,10 +69,7 @@ export default function decorate(block) {
     event.preventDefault();
     const enteredUsername = event.target.username.value;
     const enteredPassword = event.target.password.value;
-    const authenticated = userCredentials.some(
-      (cred) =>
-        cred.username === enteredUsername && cred.password === enteredPassword
-    );
+    const authenticated = userCredentials.some((cred) =>cred.username === enteredUsername && cred.password === enteredPassword);
     if (authenticated) {
       localStorage.setItem('authToken', 'your-auth-token');
       window.location.href = '/';
@@ -83,38 +80,23 @@ export default function decorate(block) {
   
   // Timeout logic
 
-  let timeout;
-  const activityEvents = [
-    'click',
-    'mousemove',
-    'keypress',
-    'scroll',
-    'touchstart',
-  ];
+  const activityEvents = ['click','mousemove','keypress','scroll','touchstart'];
+  const logoutAfterInactivity = () => {
+    localStorage.removeItem('authToken');
+    window.location.href = 'login';
+  };
 
   const resetTimeout = () => {
     if (!checkAuth()) {
-      removeActivityListeners();
       return;
     }
-    timeout = setTimeout(logoutAfterInactivity, 20000);
+  setTimeout(logoutAfterInactivity, 20000);
   };
 
   const addActivityListeners = () => {
     activityEvents.forEach((event) => {
       document.addEventListener(event, resetTimeout);
     });
-  };
-
-  const removeActivityListeners = () => {
-    activityEvents.forEach((event) => {
-      document.removeEventListener(event, resetTimeout);
-    });
-  };
-
-  const logoutAfterInactivity = () => {
-    localStorage.removeItem('authToken');
-    window.location.href = 'login';
   };
 
   addActivityListeners();
