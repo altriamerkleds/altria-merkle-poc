@@ -34,6 +34,9 @@ function handleRedirection() {
     // Store URL
     localStorage.setItem('redirectUrl', window.location.href);
     window.location.href = loginPagePath;
+  } else if (isAuthenticated && currentPath === loginPagePath) {
+    // Redirect to the stored URL after authentication
+    window.location.href = "/";
   }
 }
 
