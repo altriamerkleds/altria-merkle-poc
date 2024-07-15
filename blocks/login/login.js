@@ -37,7 +37,6 @@ export default function decorate(block) {
       userCredentials.push({ username, password });
     }
   });
-
   // Handle login form
   const loginForm = document.getElementById('loginForm');
   loginForm.addEventListener('submit', (event) => {
@@ -48,7 +47,9 @@ export default function decorate(block) {
     && cred.password === enteredPassword);
     if (authenticated) {
       localStorage.setItem('authToken', 'your-auth-token');
-      window.location.href = '/';
+      const redirectUrl = localStorage.getItem('redirectUrl') || '/';
+      localStorage.removeItem('redirectUrl');
+      window.location.href = redirectUrl;
     } else {
       alert('Invalid credentials');
     }

@@ -25,20 +25,28 @@ function checkAuth() {
   const token = localStorage.getItem('authToken');
   return token !== null;
 }
-// Check authenticatation
-const isAuthenticated = checkAuth();
-const currentPath = window.location.pathname;
 
-// If the user is on the non-login page and non-authenticated, redirect to the login page
-if (currentPath !== '/login' && !isAuthenticated) {
-  window.location.href = '/login';
+function handleRedirection() {
+  const isAuthenticated = checkAuth();
+  const currentPath = window.location.pathname;
+  const loginPagePath = '/login';
+  if (!isAuthenticated && currentPath !== loginPagePath) {
+    // Store URL
+    localStorage.setItem('redirectUrl', window.location.href);
+    window.location.href = loginPagePath;
+  } else if (isAuthenticated && currentPath === loginPagePath) {
+    // Redirect to the stored URL after authentication
+    window.location.href = '/';
+  }
 }
+
+handleRedirection();
 
 // Timeout logic
 const activityEvents = ['click', 'mousemove', 'keypress', 'scroll', 'touchstart'];
 const logoutAfterInactivity = () => {
   localStorage.removeItem('authToken');
-  window.location.href = 'login';
+  window.location.href = './';
 };
 
 const resetTimeout = () => {
