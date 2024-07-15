@@ -34,7 +34,7 @@ function handleRedirection() {
     // Store URL
     localStorage.setItem('redirectUrl', window.location.href);
     window.location.href = loginPagePath;
-  } 
+  }
 }
 
 handleRedirection();
