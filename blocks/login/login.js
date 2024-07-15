@@ -26,32 +26,32 @@ export default function decorate(block) {
   userForm.appendChild(pwdLabel);
   userForm.appendChild(pwdInput);
   userForm.appendChild(btnInput);
-  
+
   // rows and columns to get the data
   [...block.children].forEach((row) => {
-  const cols = row.children;
-  if (cols.length >= 2) {
-  // at least two columns
-  const username = cols[0].textContent.trim();
-  const password = cols[1].textContent.trim();
-  userCredentials.push({ username, password });
+    const cols = row.children;
+    if (cols.length >= 2) {
+      // at least two columns
+      const username = cols[0].textContent.trim();
+      const password = cols[1].textContent.trim();
+      userCredentials.push({ username, password });
     }
   });
   // Handle login form
   const loginForm = document.getElementById('loginForm');
   loginForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const enteredUsername = event.target.username.value;
-  const enteredPassword = event.target.password.value;
-  const authenticated = userCredentials.some((cred) => cred.username === enteredUsername
-  && cred.password === enteredPassword);
-  if (authenticated) {
-  localStorage.setItem('authToken', 'your-auth-token');
-  const redirectUrl = localStorage.getItem('redirectUrl') || '/';
-  localStorage.removeItem('redirectUrl');
-  window.location.href = redirectUrl;
-  } else {
-  alert('Invalid credentials');
-  }
+    event.preventDefault();
+    const enteredUsername = event.target.username.value;
+    const enteredPassword = event.target.password.value;
+    const authenticated = userCredentials.some((cred) => cred.username === enteredUsername
+    && cred.password === enteredPassword);
+    if (authenticated) {
+      localStorage.setItem('authToken', 'your-auth-token');
+      const redirectUrl = localStorage.getItem('redirectUrl') || '/';
+      localStorage.removeItem('redirectUrl');
+      window.location.href = redirectUrl;
+    } else {
+      alert('Invalid credentials');
+    }
   });
 }
