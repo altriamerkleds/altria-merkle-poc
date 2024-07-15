@@ -34,12 +34,7 @@ function handleRedirection() {
     // Store URL
     localStorage.setItem('redirectUrl', window.location.href);
     window.location.href = loginPagePath;
-  } else if (isAuthenticated && currentPath === loginPagePath) {
-    // Redirect to the stored URL after authentication
-    const redirectUrl = localStorage.getItem('redirectUrl') || '/';
-    localStorage.removeItem('redirectUrl');
-    window.location.href = redirectUrl;
-  }
+  } 
 }
 
 handleRedirection();
