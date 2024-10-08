@@ -1,0 +1,9 @@
+.offer-container
+{
+  padding : 5px;
+  margin : 10px;
+  border: 5px solid green;
+  font-weight: 900;
+  font-size:25px;
+  font-family:var(--warning-font);
+}
